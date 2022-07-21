@@ -1,0 +1,14 @@
+{
+  "name": "m1",
+  "version": "1.0.0",
+  "description": "'delta_task3_normal_mode'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "'VENKATESH_A_106121141'",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
