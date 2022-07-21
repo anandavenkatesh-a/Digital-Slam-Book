@@ -7,8 +7,8 @@ const port = 9999;
 const express_ejs_layouts = require('express-ejs-layouts');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
-
-
+const db = require('./config/mongoose');
+app.use(express.urlencoded());
 //set up sass
 app.use(sassMiddleware({
     src:path.join(__dirname,'/assets/scss'),
