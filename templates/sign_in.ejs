@@ -1,11 +1,43 @@
 
 
-<link rel="stylesheet" href="/css/sign_in.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sign_in.css">
+    <script src="https://kit.fontawesome.com/62ef345795.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><img src="/images/icon2.png" id = 'heading-icon'> DSbook</h1>
+        <div>
+            <div>
+              <span id="type-writter"></span>
+              <span id="type-writter-cursor">|</span>
+            </div>
+        </div>
+        </div>
+    </header>
+    <form action="/user/auth" method="post">
+        <span>Sign in <i class="fa-solid fa-user"></i></span>
+        <input type="text" name="email"  required placeholder="Email">
+    
+        <input type="password" name="password" required placeholder="Password">
+        
+        <button>Sign In</button>
+    </form>
+    
+    <img src="/images/icon.gif">
+    <i class="fas fa-thin fa-file-heart" id='card-logo'></i>
+    <i class="fa-solid fa-heart" id = 'heart-logo'></i>
+    <i class="fa-solid fa-heart" id = 'heart-logo3'></i>
+    <i class="fa-solid fa-heart" id = 'heart-logo2'></i>
 
-<form action="/user/auth" method="post">
-    <input type="text" name="email"  required>
-    <br>
-    <input type="password" name="password" required>
-    <br>
-    <button>submit</button>
-</form>
+</body>
+<script src = '/js/sign_in_type_writter.js'></script>
+</html>
+

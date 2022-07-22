@@ -1,0 +1,162 @@
+
+
+@keyframes blink{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    header{
+        height:51vh;
+        width:100vw;
+        background-color: #E35BEB;
+        div{
+          width:100%;
+          height:100%; 
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          h1{
+             display: inline-block;
+             color:white;
+             width:300px;
+             font-size: 3rem;
+             padding: 0;
+             margin: 0;
+           }
+           div{
+              display: flex;
+              height:fit-content;
+              width: 660px;
+              background-color: transparent;
+              justify-content: center;
+              align-items: center;            
+            }
+            div > *{
+              display: inline-block;
+              width:fit-content;
+              height: 100%;
+              font-size: 1.8rem;
+              margin: 0;
+              padding: 0;
+            }
+            #type-writter{
+              color:white;
+              margin-right: 0px;
+            }
+            #type-writter-cursor{
+              color:grey;
+              font-weight: 900;
+              margin-left: -6px;
+              animation-name: blink;
+              animation-duration:0.9s;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+            }
+            i{
+              color:white;
+              font-size: 3rem;
+            }     
+        }
+    }
+    form{
+        height:270px;
+        width:270px;
+        position: relative;
+        top: -72px;
+        left:30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(242, 184, 240);
+        span{
+            color:#E35BEB;
+            font-size: 1.5rem;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color:white;
+            opacity: 1; /* Firefox */
+            font-size: larger;
+        }
+        input{
+            background-color: transparent;
+            color:white;
+            border:0px solid;
+            border-bottom:2px solid white;
+            height:1.5rem;
+            width: 180px;
+            
+        }
+        button{
+            height: 1.5em;
+            width: 180px;
+            text-align: center;
+            background-color: #A643AB;
+            color:white;
+            font-weight: 900;
+            font-size: 1rem;
+            border-width: 0px;
+        }
+    }
+    img{
+        height:300px;
+        width:240px;
+        position: absolute;
+        top: 54vh;
+        left: 45vw;
+        transform: rotate3d(1, 0, 1, 45deg);
+    }
+    #heart-logo{
+        color:rgb(242, 184, 240);
+        position: absolute;
+        font-size: 12rem;
+        top: 39vh;
+        left: 72vw;
+    }
+    #heading-icon{
+            height: 64px;
+            width: 64px;
+            position:static;
+    }
+    #heart-logo3{
+        font-size: 9rem;
+        background: -webkit-linear-gradient(45deg,#E35BEB,rgb(242, 184, 240));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 75vh;
+        left:51vw;
+        transform: rotate3d(1, 0, 1, 45deg);
+        
+    }
+    #heart-logo2{
+        font-size: 10.2rem;
+        background: -webkit-linear-gradient(45deg,#e76ded,rgb(242, 184, 240));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top:63vh;
+        left: 63vw;
+        transform: rotate3d(1, 0, 1, 24deg);
+        
+    }
+}
+@media screen and (max-width:960px) {
+    header{
+        div{
+            height:81%;
+        }
+    }
+}

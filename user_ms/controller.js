@@ -2,7 +2,7 @@
 
 const User = require('./User');
 module.exports.render_sign_in = (req,res) => {
-      return res.render('sign_in');
+      return res.render('sign_in',{layout:false});
 }
 module.exports.haveAccount = async (req,res,next) => {
     if(req.body.email)
