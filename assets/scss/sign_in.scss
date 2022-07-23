@@ -9,120 +9,135 @@
     }
 }
 
+html{
+    width:100vw;
+}
 body{
     height:100vh;
-    width:100vw;
+    width: 100vw;
+    padding: 0;
     margin: 0;
     overflow-y: scroll;
     overflow-x: hidden;
     header{
-        height:51vh;
+        height: 300px;
         width:100vw;
         background-color: #E35BEB;
-        div{
-          width:100%;
-          height:100%; 
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          h1{
-             display: inline-block;
-             color:white;
-             width:300px;
-             font-size: 3rem;
-             padding: 0;
-             margin: 0;
-           }
-           div{
-              display: flex;
-              height:fit-content;
-              width: 660px;
-              background-color: transparent;
-              justify-content: center;
-              align-items: center;            
-            }
-            div > *{
-              display: inline-block;
-              width:fit-content;
-              height: 100%;
-              font-size: 1.8rem;
-              margin: 0;
-              padding: 0;
-            }
-            #type-writter{
-              color:white;
-              margin-right: 0px;
-            }
-            #type-writter-cursor{
-              color:grey;
-              font-weight: 900;
-              margin-left: -6px;
-              animation-name: blink;
-              animation-duration:0.9s;
-              animation-timing-function: ease-in-out;
-              animation-iteration-count: infinite;
-              animation-direction: alternate;
-            }
-            i{
-              color:white;
-              font-size: 3rem;
-            }     
-        }
     }
-    form{
-        height:270px;
-        width:270px;
-        position: relative;
-        top: -72px;
-        left:30px;
+    header > div{
+        width:100%;
+        height:100%; 
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
         align-items: center;
-        background-color: rgb(242, 184, 240);
-        span{
-            color:#E35BEB;
-            font-size: 1.5rem;
-        }
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        flex-wrap: wrap;
+        justify-content: space-around;      
+        
+        h1{
+            display: inline-block;
             color:white;
-            opacity: 1; /* Firefox */
-            font-size: larger;
-        }
-        input{
-            background-color: transparent;
-            color:white;
-            border:0px solid;
-            border-bottom:2px solid white;
-            height:1.5rem;
-            width: 180px;
-            
-        }
-        button{
-            height: 1.5em;
-            width: 180px;
-            text-align: center;
-            background-color: #A643AB;
-            color:white;
+            width:300px;
+            font-size: 3rem;
+            padding: 0;
+            margin: 0;
+          }
+          
+           i{
+             color:white;
+             font-size: 3rem;
+           }
+
+    }
+
+    header > div > div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 510px;
+        height: 60px;
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+          
+          #type-writter-cursor{
+            color:grey;
             font-weight: 900;
-            font-size: 1rem;
-            border-width: 0px;
+            margin-left: -6px;
+            animation-name: blink;
+            animation-duration:0.9s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+    }
+    header > div > div > p{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        height:fit-content;
+        width:fit-content;
+        text-align: center;
+        color: white;
+    }
+    #form-container
+    {
+        height:fit-content;
+        width:100%;
+        margin:0;
+        padding-left: 30px;
+        position: relative;
+        top: -5vh;
+        z-index: 3 !important;
+        form{
+            height:270px;
+            width:270px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(242, 184, 240,0.72) !important;
+            span{
+                color:#E35BEB;
+                font-size: 1.5rem;
+            }
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color:white;
+                opacity: 1; /* Firefox */
+                font-size: larger;
+            }
+            input{
+                background-color: transparent;
+                color:white;
+                border:0px solid;
+                border-bottom:2px solid white;
+                height:1.5rem;
+                width: 180px;
+                
+            }
+            button{
+                height: 1.5em;
+                width: 180px;
+                text-align: center;
+                background-color: #A643AB;
+                color:white;
+                font-weight: 900;
+                font-size: 1rem;
+                border-width: 0px;
+            }
         }
     }
     img{
-        height:300px;
-        width:240px;
+        height: 30vw;
+        width:27vw;
         position: absolute;
-        top: 54vh;
+        top: 360px;
         left: 45vw;
         transform: rotate3d(1, 0, 1, 45deg);
     }
     #heart-logo{
         color:rgb(242, 184, 240);
         position: absolute;
-        font-size: 12rem;
-        top: 39vh;
+        font-size: 18vw;
+        top: 237px;
         left: 72vw;
     }
     #heading-icon{
@@ -131,32 +146,51 @@ body{
             position:static;
     }
     #heart-logo3{
-        font-size: 9rem;
+        font-size: 12vw;
         background: -webkit-linear-gradient(45deg,#E35BEB,rgb(242, 184, 240));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position: absolute;
-        top: 75vh;
+        top: 480px;
         left:51vw;
         transform: rotate3d(1, 0, 1, 45deg);
         
     }
     #heart-logo2{
-        font-size: 10.2rem;
+        font-size: 15vw;
         background: -webkit-linear-gradient(45deg,#e76ded,rgb(242, 184, 240));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position: absolute;
-        top:63vh;
+        top: 390px;
         left: 63vw;
         transform: rotate3d(1, 0, 1, 24deg);
         
     }
+    #dec-images{
+        left:21vw !important;
+    }
+    #heart-logo{
+        left:72vw !important;
+    }
+    #heart-logo3{
+        left:36vw !important;
+    }
+    #heart-logo2{
+        left:48vw !important;
+    }
 }
 @media screen and (max-width:960px) {
-    header{
-        div{
-            height:81%;
+        header > div{
+            height:90% !important;
         }
+
+}
+@media screen and (max-width:771px){
+    #form-container
+    {
+        display: flex;
+        justify-content: center;
+        padding-left: 0 !important;
     }
 }

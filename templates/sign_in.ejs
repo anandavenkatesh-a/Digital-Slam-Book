@@ -13,25 +13,25 @@
 <body>
     <header>
         <div>
-            <h1><img src="/images/icon2.png" id = 'heading-icon'> DSbook</h1>
-        <div>
-            <div>
-              <span id="type-writter"></span>
-              <span id="type-writter-cursor">|</span>
-            </div>
-        </div>
+              <h1><img src="/images/icon2.png" id = 'heading-icon'> DSbook</h1>
+              <div>
+                    <p id="type-writter">
+                    </p>
+                    <span id="type-writter-cursor">|</span>
+              </div>
         </div>
     </header>
-    <form action="/user/auth" method="post">
-        <span>Sign in <i class="fa-solid fa-user"></i></span>
-        <input type="text" name="email"  required placeholder="Email">
-    
-        <input type="password" name="password" required placeholder="Password">
+    <div id = 'form-container'>
+        <form action="/user/auth" method="post">
+            <span>Sign in <i class="fa-solid fa-user"></i></span>
+            <input type="text" name="email"  required placeholder="Email">
         
-        <button>Sign In</button>
-    </form>
-    
-    <img src="/images/icon.gif">
+            <input type="password" name="password" required placeholder="Password">
+            
+            <button>Sign In</button>
+        </form>
+    </div>
+    <img src="/images/icon.gif" id="dec-images">
     <i class="fas fa-thin fa-file-heart" id='card-logo'></i>
     <i class="fa-solid fa-heart" id = 'heart-logo'></i>
     <i class="fa-solid fa-heart" id = 'heart-logo3'></i>

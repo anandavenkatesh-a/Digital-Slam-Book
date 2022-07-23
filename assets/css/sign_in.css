@@ -7,21 +7,26 @@
   }
 }
 
+html {
+  width: 100vw;
+}
+
 body {
   height: 100vh;
   width: 100vw;
+  padding: 0;
   margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 body header {
-  height: 51vh;
+  height: 300px;
   width: 100vw;
   background-color: #E35BEB;
 }
 
-body header div {
+body header > div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -30,7 +35,7 @@ body header div {
   justify-content: space-around;
 }
 
-body header div h1 {
+body header > div h1 {
   display: inline-block;
   color: white;
   width: 300px;
@@ -39,30 +44,23 @@ body header div h1 {
   margin: 0;
 }
 
-body header div div {
-  display: flex;
-  height: fit-content;
-  width: 660px;
-  background-color: transparent;
-  justify-content: center;
-  align-items: center;
+body header > div i {
+  color: white;
+  font-size: 3rem;
 }
 
-body header div div > * {
-  display: inline-block;
-  width: fit-content;
-  height: 100%;
+body header > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 510px;
+  height: 60px;
   font-size: 1.8rem;
   margin: 0;
   padding: 0;
 }
 
-body header div #type-writter {
-  color: white;
-  margin-right: 0px;
-}
-
-body header div #type-writter-cursor {
+body header > div > div #type-writter-cursor {
   color: grey;
   font-weight: 900;
   margin-left: -6px;
@@ -73,30 +71,42 @@ body header div #type-writter-cursor {
   animation-direction: alternate;
 }
 
-body header div i {
+body header > div > div > p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
   color: white;
-  font-size: 3rem;
 }
 
-body form {
+body #form-container {
+  height: fit-content;
+  width: 100%;
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+  top: -5vh;
+  z-index: 3 !important;
+}
+
+body #form-container form {
   height: 270px;
   width: 270px;
-  position: relative;
-  top: -72px;
-  left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #f2b8f0;
+  background-color: rgba(242, 184, 240, 0.72) !important;
 }
 
-body form span {
+body #form-container form span {
   color: #E35BEB;
   font-size: 1.5rem;
 }
 
-body form ::placeholder {
+body #form-container form ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
   opacity: 1;
@@ -104,7 +114,7 @@ body form ::placeholder {
   font-size: larger;
 }
 
-body form input {
+body #form-container form input {
   background-color: transparent;
   color: white;
   border: 0px solid;
@@ -113,7 +123,7 @@ body form input {
   width: 180px;
 }
 
-body form button {
+body #form-container form button {
   height: 1.5em;
   width: 180px;
   text-align: center;
@@ -125,10 +135,10 @@ body form button {
 }
 
 body img {
-  height: 300px;
-  width: 240px;
+  height: 30vw;
+  width: 27vw;
   position: absolute;
-  top: 54vh;
+  top: 360px;
   left: 45vw;
   transform: rotate3d(1, 0, 1, 45deg);
 }
@@ -136,8 +146,8 @@ body img {
 body #heart-logo {
   color: #f2b8f0;
   position: absolute;
-  font-size: 12rem;
-  top: 39vh;
+  font-size: 18vw;
+  top: 237px;
   left: 72vw;
 }
 
@@ -148,29 +158,53 @@ body #heading-icon {
 }
 
 body #heart-logo3 {
-  font-size: 9rem;
+  font-size: 12vw;
   background: -webkit-linear-gradient(45deg, #E35BEB, #f2b8f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  top: 75vh;
+  top: 480px;
   left: 51vw;
   transform: rotate3d(1, 0, 1, 45deg);
 }
 
 body #heart-logo2 {
-  font-size: 10.2rem;
+  font-size: 15vw;
   background: -webkit-linear-gradient(45deg, #e76ded, #f2b8f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  top: 63vh;
+  top: 390px;
   left: 63vw;
   transform: rotate3d(1, 0, 1, 24deg);
 }
 
+body #dec-images {
+  left: 21vw !important;
+}
+
+body #heart-logo {
+  left: 72vw !important;
+}
+
+body #heart-logo3 {
+  left: 36vw !important;
+}
+
+body #heart-logo2 {
+  left: 48vw !important;
+}
+
 @media screen and (max-width: 960px) {
-  header div {
-    height: 81%;
+  header > div {
+    height: 90% !important;
+  }
+}
+
+@media screen and (max-width: 771px) {
+  #form-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
   }
 }
