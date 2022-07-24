@@ -1,7 +1,139 @@
-header {
-  color: brown;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-footer {
-  color: #e77f7f;
+body header {
+  width: 100%;
+  height: 63px;
+  background-color: #E35BEB;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body header h1 {
+  width: fit-content;
+  height: 30px;
+  display: inline-block;
+  color: white;
+  font-size: 2.4rem;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header h1 img {
+  height: 32px;
+  width: 32px;
+  margin-right: -18px;
+}
+
+body header nav {
+  width: 180px;
+  height: 63px;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+body header nav span {
+  box-sizing: border-box;
+  height: 100%;
+  width: 45px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+body header nav span a {
+  color: white;
+  text-decoration: none;
+}
+
+body header nav span:hover {
+  border: 0px;
+  border-bottom: 4px solid #632766;
+}
+
+body header nav span:hover a {
+  color: #632766;
+}
+
+body header #logout {
+  padding-left: 105px;
+  color: #e31d1d;
+  text-decoration: none;
+}
+
+body header #dropbox-box {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+
+body header #dropbox-box #dropbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  height: fit-content;
+  position: absolute;
+}
+
+body header #dropbox-box #dropbox #dropbox-button {
+  height: 27px;
+  width: 27px;
+  padding: 0;
+  margin: 0;
+  border: 0px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ac77ae;
+}
+
+body header #dropbox-box #dropbox #dropbox-button img {
+  height: 15px;
+  width: 15px;
+}
+
+body header #dropbox-box #dropbox #dropbox-content {
+  display: none;
+  height: fit-content;
+  width: fit-content;
+}
+
+body header #dropbox-box #dropbox #dropbox-content span {
+  width: 150px;
+  height: fit-content;
+  border-top: 0.5px solid white;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: rgba(242, 184, 240, 0.72);
+}
+
+body header #dropbox-box #dropbox #dropbox-content span a {
+  padding: 0;
+  text-decoration: none;
+}
+
+body header #dropbox-box #dropbox #dropbox-content span:hover {
+  transform: scale(1.02) !important;
+}
+
+body header #dropbox-box #dropbox .dropbox-content-flex {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  align-items: center !important;
 }

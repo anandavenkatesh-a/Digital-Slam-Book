@@ -5,19 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/62ef345795.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/layout1.css">
     <%- style %>
 </head>
 <body>
     <header> 
-        <h1>Anand</h1>
+        <h1>
+            <span>
+                <img src="/images/icon2.png" id = 'heading-icon'>
+                DSbook
+            </span>
+        </h1>
+        <nav>
+            <span><a href="/user/home"><i class="fa-solid fa-house"></i></a></span>
+            <span><a href="/user/profile"><i class="fa-solid fa-user"></i></a></span>
+            <span><a href="/user/friends"><i class="fa-solid fa-user-group"></i></a></span>
+        </nav>
+
+        
+        
+        
+
+        <span><a href="/user/sign-out" id = 'logout'><i class="fa-solid fa-arrow-right-from-bracket" ></i></a></span>
     </header>
 
     <%- body %>
 
-    <footer>
-        <h1>Thanks</h1>
-    </footer>
     <%- script %>
 </body>
+
+
+<script>
+    const header = document.querySelector('header');
+    
+    const nav = document.querySelector('nav');
+    const logout = document.querySelector('#logout').parentNode;
+    
+    const dropbox_box = document.createElement('div');
+    dropbox_box.setAttribute('id','dropbox-box');
+    dropbox_box.innerHTML = `
+        <div id='dropbox'>
+            <button id = 'dropbox-button'>
+              <img src='/images/menu.png'>
+            </button>
+
+            <div id = 'dropbox-content'>
+              <span><a href="/user/home"><i class="fa-solid fa-house"></i>Home</a></span>
+              <span><a href="/user/profile"><i class="fa-solid fa-user"></i>Profile</a></span>
+              <span><a href="/user/friends"><i class="fa-solid fa-user-group"></i>Friends</a></span>
+              <span><a href="/user/sign-out" id = 'logout'><i class="fa-solid fa-arrow-right-from-bracket" ></i>Log Out</a></span>
+            </div>
+        </div>
+    `;
+    
+         if(window.innerWidth <= 380)
+         {
+            console.log('very small');
+            document.querySelector('header h1').style.fontSize = '1.5rem';
+         }
+         else{
+            document.querySelector('header h1').style.fontSize = '2.1rem';
+         }
+
+          if(window.innerWidth <= 540&&(document.querySelector('#dropbox-box') == null))
+          {
+              console.log('add drop box')
+              header.appendChild(dropbox_box);
+              header.removeChild(nav);
+              header.removeChild(logout);
+          }
+          else if(window.innerWidth > 540&&(document.querySelector('#dropbox-box') != null))
+          {
+            console.log('remove drop box');
+            header.removeChild(dropbox_box);
+            header.appendChild(nav);
+            header.appendChild(logout);
+          }
+    window.addEventListener('resize',() => {
+          
+        if(window.innerWidth <= 380)
+        {
+            console.log('small');
+            document.querySelector('header h1').style.fontSize = '0.9rem';
+        }
+        else{
+            document.querySelector('header h1').style.fontSize = '2.1rem'
+        }
+
+        if(window.innerWidth <= 540&&(document.querySelector('#dropbox-box') == null))
+          {
+              console.log('add drop box')
+              header.appendChild(dropbox_box);
+              header.removeChild(nav);
+              header.removeChild(logout);
+          }
+          else if(window.innerWidth > 540&&(document.querySelector('#dropbox-box') != null))
+          {
+            console.log('remove drop box');
+            header.removeChild(dropbox_box);
+            header.appendChild(nav);
+            header.appendChild(logout);
+          }
+          
+
+    });
+    const dropbox_content = dropbox_box.querySelector('#dropbox-content');
+    const dropbox_button = dropbox_box.querySelector('#dropbox-button');
+    dropbox_button.addEventListener('click',() => {
+        console.log('button clcicked');
+        dropbox_content.classList.toggle('dropbox-content-flex');
+    });
+</script>
 </html>
