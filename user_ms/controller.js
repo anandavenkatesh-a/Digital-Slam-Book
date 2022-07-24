@@ -41,7 +41,7 @@ module.exports.sign_out = (req,res) => {
     });
 }
 module.exports.render_sign_up = (req,res) => {
-    return res.render('sign_up');
+    return res.render('sign_up',{layout:false});
 }
 module.exports.create = async (req,res) => {
     console.log(req.body);
@@ -53,9 +53,19 @@ module.exports.create = async (req,res) => {
          }
          else
          {
-            const new_user = new User(req.body);
-            await new_user.save();
-            return res.redirect('/user/sign-in');
+            if(req.body.password == req.body.confirm_password){
+              const new_user = new User({
+                name:req.body.name,
+                email:req.body.email,
+                password:req.body.password
+              });
+              await new_user.save();
+              return res.redirect('/user/sign-in');
+            }
+            else
+            {
+                return res.redirect('back');
+            }
          }
     }
     catch{

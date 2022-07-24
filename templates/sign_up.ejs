@@ -2,12 +2,44 @@
 
 <link rel="stylesheet" href="/css/sign_up.css">
 
-<form action="/user/create" method="post">
-    <input type="text" name="email" required>
-    <br>
-    <input type="password" name="password" required>
-    <br>
-    <input type="text" name="name" required>
-    <br>
-    <button>submit</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sign_up.css">
+    <script src="https://kit.fontawesome.com/62ef345795.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div>
+              <h1><img src="/images/icon2.png" id = 'heading-icon'> DSbook</h1>
+              <div>
+                    <p id="type-writter">
+                    </p>
+                    <span id="type-writter-cursor">|</span>
+              </div>
+        </div>
+    </header>
+    <div id = 'form-container'>
+        <form action="/user/create" method="post">
+            <span>Sign Up <i class="fa-solid fa-user"></i></span>
+            <input type="text" name="email"  required placeholder="Email">
+            <input type="text" name="name" required placeholder="Name">
+            <input type="password" name="password" required placeholder="Password">
+            <input type="password" name="confirm_password" required placeholder="Confirm Password">
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <img src="/images/icon.gif" id="dec-images">
+    <i class="fas fa-thin fa-file-heart" id='card-logo'></i>
+    <i class="fa-solid fa-heart" id = 'heart-logo'></i>
+    <i class="fa-solid fa-heart" id = 'heart-logo3'></i>
+    <i class="fa-solid fa-heart" id = 'heart-logo2'></i>
+
+</body>
+<script src = '/js/sign_in_type_writter.js'></script>
+</html>
+

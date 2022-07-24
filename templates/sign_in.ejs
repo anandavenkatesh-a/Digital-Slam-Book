@@ -24,7 +24,7 @@
     <div id = 'form-container'>
         <form action="/user/auth" method="post">
             <span>Sign in <i class="fa-solid fa-user"></i></span>
-            <input type="text" name="email"  required placeholder="Email">
+            <input type="text" name="email" required placeholder="Email">
         
             <input type="password" name="password" required placeholder="Password">
             
@@ -39,5 +39,20 @@
 
 </body>
 <script src = '/js/sign_in_type_writter.js'></script>
+<script>
+    const inputs = document.querySelectorAll('input');
+        for(input of inputs)
+        {
+            input.innerText = '';
+        }
+    const button = document.querySelector('button');
+    button.addEventListener('click',() => {
+        const inputs = document.querySelectorAll('input');
+        for(input of inputs)
+        {
+            input.innerText = '';
+        }
+    });
+</script>
 </html>
 

@@ -14,7 +14,6 @@ passport.use(new LocalStrategy(
       User.findOne({email:email},(err,user) => {
             if(err)
             {
-                req.flash('error','auth failed : error in auth!');
                 return done(err);
             }
             
@@ -25,7 +24,6 @@ passport.use(new LocalStrategy(
                     return done(null,user); // provides the user(used for serializing)
                 }
             }
-            req.flash('error','auth failed : wrong Username / Password');
             return done(null,false);
       });
 }));
