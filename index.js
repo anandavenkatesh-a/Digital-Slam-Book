@@ -13,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
 const passportLocalAuth = require('./config/passport_strategies/localAuth');
+const bodyParser = require('body-parser');
 app.use(express.urlencoded());
 //set up sass
 app.use(sassMiddleware({
@@ -58,6 +59,9 @@ app.use(passport.session());
 
 //set user details in res
 app.use(passport.setAuthenticatedUserDetails)
+
+//set up bodyparser
+app.use(bodyParser.json());
 
 //set up routing
 app.use('/',require('./route'));

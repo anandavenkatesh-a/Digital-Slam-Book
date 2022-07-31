@@ -5,13 +5,15 @@ module.exports.render_sign_in = (req,res) => {
       return res.render('sign_in',{layout:false});
 }
 module.exports.haveAccount = async (req,res,next) => {
+    console.log(req.body);
     if(req.body.email)
     {
        try{
           const user = await User.findOne({email:req.body.email}).exec();
           if(user)
           {
-              next();
+             console.log('next'); 
+             next();
           }
           else
           {
