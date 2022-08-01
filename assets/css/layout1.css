@@ -138,3 +138,12 @@ body header #dropbox-box #dropbox .dropbox-content-flex {
   justify-content: space-around !important;
   align-items: center !important;
 }
+
+.nav-highlight {
+  border: 0px;
+  border-bottom: 4px solid #632766;
+}
+
+.nav-highlight a {
+  color: #632766;
+}

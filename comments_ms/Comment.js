@@ -28,7 +28,15 @@ const commentSchema = new mongoose.Schema({
     },
     q5:{
         type:String
-    }
+    },
+    // friend_from:{
+    //     type:Boolean,
+    //     required:true,
+    // },
+    // friend_to:{
+    //     type:Boolean,
+    //     required:true,
+    // }
 },{
     timestamps:true
 });

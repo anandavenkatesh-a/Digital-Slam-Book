@@ -9,7 +9,7 @@ module.exports.get_comments = async (req,res) => {
         .populate({path:'to',select:'name'});
 
         let result = [];
-        let regex = new RegExp(req.body.query);
+        let regex = new RegExp( '^'+ req.body.query);
 
         comments.forEach((comment) => {
             if(regex.test(comment.to.name))

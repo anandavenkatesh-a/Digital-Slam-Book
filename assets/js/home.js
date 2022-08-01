@@ -19,13 +19,25 @@ function renderResults()
     {
         resultContainer.innerHTML += `
             <div class = 'search-result'> 
-               ${r.to.name}
+               <div>
+                   <div class='users-profile-pic'></div>
+                   <div class='users-name'>${r.to.name}</div>
+               </div>   
             </div>    
         `; 
     }
 }
 const search_bar = document.querySelector('#search-bar');
 
+
+$.ajax('/comment/api/get-comments', {
+    type: 'POST',  // http method
+    data: { query: search_bar.value },  // data to submit
+    success: function (data, status, xhr) {
+        results = data.data;
+        renderResults();
+    }
+});
 
 search_bar.addEventListener('keyup',() => {
         $.ajax('/comment/api/get-comments', {
@@ -38,3 +50,5 @@ search_bar.addEventListener('keyup',() => {
         });
 });
 
+
+document.querySelector('#home-nav').classList.add('nav-highlight');

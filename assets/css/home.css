@@ -8,7 +8,8 @@ main {
 }
 
 main #search-bar {
-  box-shadow: #ccdbe8 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  box-shadow: #ccdbe8 3px 3px 6px 0px inset, #ede8ea -3px -3px 6px 1px inset;
+  box-shadow: 0 0 6px 3px #f690dd;
   display: inline-block;
   height: 36px;
   width: 600px;
@@ -17,19 +18,68 @@ main #search-bar {
   padding-left: 21px;
   font-size: larger;
   border: 0px solid;
+  margin: 30px;
 }
 
-main #search-result-container {
-  height: 540px;
-  width: 720px;
-  border: 2px solid black;
-  border-radius: 0.3rem;
+main #search-container-wrapper {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+main #search-container-wrapper #search-result-container {
+  height: fit-content;
+  width: 810px;
   background-color: transparent;
   display: grid;
-  gap: 21px;
+  gap: 6px;
+  justify-items: center;
 }
 
-main #search-result-container .search-result {
-  height: 15px;
-  width: 360px;
+main #search-container-wrapper #search-result-container .search-result {
+  height: 69px;
+  width: 87%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: #f2f1f2;
+  border: 0px solid;
+  border-radius: 0.3rem;
+  border-left: 6px solid #f791ef;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main #search-container-wrapper #search-result-container .search-result > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main #search-container-wrapper #search-result-container .search-result > div .users-profile-pic {
+  height: 60px;
+  width: 60px;
+  border: 0px solid;
+  border-radius: 50%;
+  background-image: url("https://iconape.com/wp-content/files/im/10836/png/iconfinder_3_avatar_2754579.png");
+  background-size: contain;
+  background-position: center;
+  margin: 9px !important;
+  display: inline-block;
+}
+
+main #search-container-wrapper #search-result-container .search-result > div .users-name {
+  font-size: 1.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+}
+
+main #search-container-wrapper #search-result-container .search-result:hover {
+  transform: scale(1.011);
+}
+
+input:focus-visible {
+  outline: none;
 }
