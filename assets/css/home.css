@@ -48,8 +48,13 @@ main #search-container-wrapper #search-result-container .search-result {
   border-radius: 0.3rem;
   border-left: 6px solid #f791ef;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+
+main #search-container-wrapper #search-result-container .search-result a img {
+  height: 32px;
+  width: 32px;
 }
 
 main #search-container-wrapper #search-result-container .search-result > div {

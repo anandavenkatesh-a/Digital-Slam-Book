@@ -21,8 +21,9 @@ function renderResults()
             <div class = 'search-result'> 
                <div>
                    <div class='users-profile-pic'></div>
-                   <div class='users-name'>${r.to.name}</div>
+                   <span class = 'users-name'>${r.to.name}</span>
                </div>   
+               <a class='users-name' href = ${'/comment/show-comment?id='+r._id}><img src='/images/wishlist.png'></a>
             </div>    
         `; 
     }
