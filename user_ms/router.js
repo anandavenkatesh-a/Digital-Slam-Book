@@ -17,4 +17,8 @@ router.get('/home',passport.checkAuthentication,(req,res,next) => {
     next();
 },customMiddleware.create_comments,controller.render_home);
 
+
+router.get('/profile',passport.checkAuthentication,controller.profile)
+router.post('/profile/update',passport.checkAuthentication,controller.updateProfile)
+
 module.exports = router;

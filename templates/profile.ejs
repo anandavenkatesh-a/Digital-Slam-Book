@@ -1,0 +1,70 @@
+
+
+<link rel="stylesheet" href="/css/profile.css">
+<div id ='main-container'>
+   <h1 id = 'heading'>My Account</h1>
+
+   <div id = 'profile-pic-container'>
+     <div id="profile-pic"
+         style="background-image: url('<%= locals.user.avatar %>');
+         background-position: center;
+         background-size:144%;"
+     ></div>
+     <button id="profile-pic-edit"><i class="fa-solid fa-pen"></i></button>
+     <form action="">
+         <input type="text" value="<%= locals.user.name %>" name="name">
+         <button type="submit" class="edit">edit</button>
+     </form>
+   </div>
+
+   <div id ='other-details'>
+
+    <div>
+        <span class="name">Passout?</span>
+        <form action="">
+            <div>
+                <label for="radio-yes">yes</label><input id ='radio-yes' type="radio" name="ans" value="yes" checked="true">
+                <label for="radio-no">no</label><input id="radio-no" type="radio" name="ans" value="no">
+            </div>
+            <button class = 'edit'>edit</button>
+        </form>
+     </div>
+
+      <div>
+          <span class ='name'>Department</span>
+          <form action="">
+              <input type="text" value="<%= locals.user.dept %>" name="dept">
+              <button class="edit">edit</button>
+          </form>
+      </div>
+
+      <div>
+         <span class ='name'>Year</span>
+         <form action="">
+            <input type="text" value="<%= locals.user.acc_year %>" name="acc_year">
+            <button class="edit">edit</button>
+        </form>
+     </div>
+
+     <div>
+        <span class ='name'>Hostel</span>
+        <form action="">
+         <input type="text" value="<%= locals.user.hostel %>" name="hostel">
+         <button class="edit">edit</button>
+        </form>
+     </div>
+
+     <div>
+        <span class ='name'>Password</span>
+        <form action="">
+         <input type="password" value="<%= locals.user.password %>" name="password">
+         <button class="edit">change</button>
+     </form>
+     </div>
+   </div>
+
+   <button id="update">update</button>
+   <input type="text" id='update-link' name="id" value="/user/profile/update?id=<%= locals.user._id %>">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/profile.js"></script>

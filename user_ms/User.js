@@ -13,6 +13,22 @@ const userSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true
+    },
+    hostel:{
+        type:String,
+        default:''
+    },
+    acc_year:{
+        type:String,
+        default:''
+    },
+    dept:{
+        type:String,
+        default:''
+    },
+    avatar:{
+        type:String,
+        default:'https://iconape.com/wp-content/files/im/10836/png/iconfinder_3_avatar_2754579.png'
     }
  },{
      timestamps:true

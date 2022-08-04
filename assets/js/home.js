@@ -51,5 +51,3 @@ search_bar.addEventListener('keyup',() => {
         });
 });
 
-
-document.querySelector('#home-nav').classList.add('nav-highlight');

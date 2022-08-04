@@ -74,3 +74,37 @@ module.exports.create = async (req,res) => {
          return res.redirect('back');
     }     
 };
+
+module.exports.profile = (req,res) => {
+    return res.render('profile');
+}
+module.exports.updateProfile = async (req,res) => {
+    try{
+        let user = await User.findOne({
+            _id:req.query.id
+        });
+    
+        console.log('before',user);
+
+        user.name = req.body.name;
+        user.dept = req.body.dept;
+        user.hostel = req.body.hostel;
+        user.acc_year = req.body.acc_year;
+        user.password = req.body.password;
+    
+        console.log('after',user);
+        await user.save();
+    
+        return res.status(200).json({
+            message:'req succesful',
+            data:user
+        });
+    } 
+    catch(err)
+    {
+        console.log(err);
+        return res.status(500).json({
+            message:'internal server error'
+        });
+    }
+};

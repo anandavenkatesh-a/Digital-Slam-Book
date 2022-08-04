@@ -1,17 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Mouse+Memoirs&display=swap");
-body {
-  margin: 0;
+main {
   width: 100%;
-  height: 100vh;
+  height: 1260px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+main #main-container1 {
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 21px 0px 21px 0px;
   overflow-y: scroll;
 }
 
-form {
+main #main-container1 #heading {
+  margin: 0;
+  font-size: 1rem;
+  height: fit-content;
+  width: fit-content;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 0px solid;
+  border-radius: 0.5rem;
+  background-color: #d0ccd0;
+  margin: 21px;
+}
+
+main #main-container1 #profile-pic-container {
+  width: 360px;
+  height: fit-content;
+  padding: 30px;
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border: 0px solid;
+  border-radius: 0.5rem;
+  background-color: #d0ccd0;
+  padding: 12px;
+}
+
+main #main-container1 #profile-pic-container #profile-pic {
+  height: 72px;
+  width: 72px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+main #main-container1 #profile-pic-container input {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 1rem;
+  text-align: center;
+}
+
+main #main-container1 #other-details {
+  width: 420px;
+  height: fit-content;
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+main #main-container1 #other-details > div {
+  height: 45px;
+  width: 360px;
+  border: 0px solid;
+  border-radius: 0.5rem;
+  background-color: #d0ccd0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px !important;
+  background-image: none !important;
+}
+
+main #main-container1 #other-details > div .name {
+  font-size: 0.81rem;
+  color: #696868;
+}
+
+main #main-container1 #other-details > div form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main #main-container1 #other-details > div form input {
+  background-color: transparent;
+  border: none !important;
+  font-size: 1rem;
+}
+
+main #main-container2 {
+  height: fit-content;
+  width: fit-content;
+  display: inline-block;
+}
+
+main #main-container2 form {
   width: 720px;
   height: 600px;
   overflow-y: scroll;
@@ -27,7 +125,7 @@ form {
   padding-bottom: 21px !important;
 }
 
-form .question-container {
+main #main-container2 form .question-container {
   width: 540px;
   height: fit-content;
   border: 0px solid;
@@ -45,7 +143,7 @@ form .question-container {
   padding-bottom: 21px !important;
 }
 
-form .question-container textarea {
+main #main-container2 form .question-container textarea {
   border: 0px solid;
   border-radius: 0.3rem;
   display: inline-block;
@@ -57,15 +155,15 @@ form .question-container textarea {
   font-family: 'Caveat', cursive;
 }
 
-form .question-container textarea:focus-visible {
+main #main-container2 form .question-container textarea:focus-visible {
   outline: none;
 }
 
-form .question-container:focus-within {
+main #main-container2 form .question-container:focus-within {
   box-shadow: 0 0 6px 3px #f690dd;
 }
 
-form button {
+main #main-container2 form button {
   background-color: #E35BEB;
   color: white;
   font-weight: 900;

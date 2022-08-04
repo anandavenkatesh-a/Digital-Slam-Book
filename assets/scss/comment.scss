@@ -3,81 +3,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Mouse+Memoirs&display=swap');
 
-body{
-    margin:0;
+$containers-color:#d0ccd0;
+
+
+main{
     width:100%;
-    height:100vh;
+    height:1260px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    overflow-y: scroll;
-}
-// h1{
-//     display: inline-block;
-//     font-size: 1.5rem;
-//     padding-left: 21px;
-//     padding-right: 21px;
-//     padding-top: 12px;
-//     padding-bottom: 12px;
-//     height:fit-content;
-//     width: fit-content;
-// }
-form{
-    width: 720px;
-    height: 600px;
-    overflow-y: scroll;
-    border:0px solid;
-    border-radius: 0.5rem;
-    display: grid;
-    gap:21px;
-    justify-content: center;
-    margin-top: 30px;
-    background-image: url('https://cdn.pixabay.com/photo/2018/03/02/19/46/rose-petals-3194062__340.jpg');
-    background-position: center;
-    padding-top: 21px !important;
-    padding-bottom: 21px !important;
-    .question-container{
-        width:540px;
-        height:fit-content;
-        border:0px solid;
-        border-radius: 0.3rem;
+    #main-container1{
+        width:100%;
+        height: 540px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-around;
-        backdrop-filter: blur(6px);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        color:#6f0955;
-        font-weight:900;
-        font-size: 1.8rem;
-        font-family: 'Mouse Memoirs', sans-serif;
-        padding-bottom: 21px !important;
-        textarea{
+        align-items: center;
+    
+        padding: 21px 0px 21px 0px;
+        overflow-y: scroll;
+        #heading{
+            margin:0;
+            font-size: 1rem;
+            height:fit-content;
+            width:fit-content;
+            padding-left:21px;
+            padding-right:21px;
+            padding-top: 12px;
+            padding-bottom: 12px;
             border:0px solid;
-            border-radius: 0.3rem;
-            display: inline-block;
-            width:510px;
-            height:120px;
-            background-color: #f4b4f7;
-            color:black;
-            font-size: 2.1rem;
-            font-family: 'Caveat', cursive;
+            border-radius: 0.5rem;
+            background-color: $containers-color;
+            margin:21px;
         }
-        textarea:focus-visible{
-            outline: none;
+        #profile-pic-container
+        {
+            width: 360px;
+            height:fit-content;
+            padding:30px;
+            position: relative;
+            padding:0;
+            display: flex;
+            justify-content: space-between;
+            border:0px solid;
+            border-radius: 0.5rem;
+            background-color: $containers-color;
+            padding:12px;
+            #profile-pic{
+                height:72px;
+                width:72px;
+                border:1px solid;
+                border-radius: 50%;
+            }
+            input{
+                background-color: transparent !important;
+                border: none !important;
+                font-size: 1rem;
+                text-align: center;
+            }
         }
         
+        #other-details{
+            width:420px;
+            height:fit-content;
+            display: grid;
+            justify-items: center;
+            gap:3px;   
+            padding-top:21px;
+            padding-bottom: 21px;
+        }
+        #other-details > div{
+            height:45px;
+            width:360px;
+            border:0px solid;
+            border-radius: 0.5rem;
+            background-color: $containers-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding:12px !important;
+            background-image: none !important;
+            .name{
+                font-size: 0.81rem;
+                color: rgb(105, 104, 104);
+            }
+            form{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input{
+                    background-color: transparent;
+                    border: none !important;
+                    font-size: 1rem;
+                }
+            }
+        }
     }
-    .question-container:focus-within{
-      box-shadow: 0 0 6px 3px rgb(246, 144, 221);
-    }
-    button{
-        background-color: #E35BEB;
-        color:white;
-        font-weight: 900;
-        font-size: larger;
-        border:0px solid;
-        border-radius: 0.3rem;
+       
+    #main-container2{
+        height: fit-content;
+        width: fit-content;
+        display: inline-block;
+        form{
+            width: 720px;
+            height: 600px;
+            overflow-y: scroll;
+            border:0px solid;
+            border-radius: 0.5rem;
+            display: grid;
+            gap:21px;
+            justify-content: center;
+            margin-top: 30px;
+            background-image: url('https://cdn.pixabay.com/photo/2018/03/02/19/46/rose-petals-3194062__340.jpg');
+            background-position: center;
+            padding-top: 21px !important;
+            padding-bottom: 21px !important;
+            .question-container{
+                width:540px;
+                height:fit-content;
+                border:0px solid;
+                border-radius: 0.3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                backdrop-filter: blur(6px);
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                color:#6f0955;
+                font-weight:900;
+                font-size: 1.8rem;
+                font-family: 'Mouse Memoirs', sans-serif;
+                padding-bottom: 21px !important;
+                textarea{
+                    border:0px solid;
+                    border-radius: 0.3rem;
+                    display: inline-block;
+                    width:510px;
+                    height:120px;
+                    background-color: #f4b4f7;
+                    color:black;
+                    font-size: 2.1rem;
+                    font-family: 'Caveat', cursive;
+                }
+                textarea:focus-visible{
+                    outline: none;
+                }
+                
+            }
+            .question-container:focus-within{
+              box-shadow: 0 0 6px 3px rgb(246, 144, 221);
+            }
+            button{
+                background-color: #E35BEB;
+                color:white;
+                font-weight: 900;
+                font-size: larger;
+                border:0px solid;
+                border-radius: 0.3rem;
+            }
+        }
     }
 }
+    
