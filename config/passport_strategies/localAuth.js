@@ -73,7 +73,7 @@ passport.setAuthenticatedUserDetails = (req,res,next) => {
 passport.notAuth = (req,res,next) => {
      if(req.isAuthenticated())
      {
-         return res.redirect('/user/sign-in');
+         return res.redirect('/user/home');
      }
 
      return next();
