@@ -7,18 +7,32 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    #search-bar{
-      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgb(237, 232, 234) -3px -3px 6px 1px inset;
-      box-shadow: 0 0 6px 3px rgb(246, 144, 221);
-      display: inline-block;
-      height: 36px;
-      width:600px;
-      border-radius: 2rem;
-      background-color:#f6f4f6;
-      padding-left: 21px;
-      font-size: larger;
-      border: 0px solid;
-      margin: 30px;
+    background-color: rgb(241, 239, 241);
+    #search-bar-container{
+      height:fit-content;
+      width: fit-content;
+      border:0px solid;
+      border-radius:2rem;
+      box-shadow: rgb(214, 216, 217) 3px 3px 6px 0px inset, rgb(237, 232, 234) -3px -3px 6px 1px inset;
+      box-shadow: 0 0 2px 1px rgb(246, 144, 221);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding:3px 12px 3px 9px;
+      margin: 30px 0px 21px 0px;
+      span{
+        display: inline-block;
+        height: fit-content;
+        width: fit-content;
+      }
+      #search-bar{
+        display: inline-block;
+        height: 36px;
+        width:600px;
+        background-color:#f6f4f6;
+        font-size: larger;
+        border: 0px solid;
+      }
     }
     #search-container-wrapper{
       width:100%;
@@ -38,7 +52,7 @@ main{
           height: 69px;
           width:87%; 
           box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-          background-color: #f2f1f2;
+          background-color: #ffffff;
           border:0px solid;
           border-radius: 0.3rem;
           border-left:6px solid rgb(247, 145, 239);

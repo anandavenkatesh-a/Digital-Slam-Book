@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  background-color: #f1eff1;
 }
 
 body header {
@@ -101,7 +102,7 @@ body header #dropbox-box #dropbox #dropbox-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ac77ae;
+  background-color: transparent;
 }
 
 body header #dropbox-box #dropbox #dropbox-button img {
@@ -113,15 +114,16 @@ body header #dropbox-box #dropbox #dropbox-content {
   display: none;
   height: fit-content;
   width: fit-content;
+  z-index: 3;
 }
 
 body header #dropbox-box #dropbox #dropbox-content span {
   width: 150px;
   height: fit-content;
-  border-top: 0.5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   padding-top: 6px;
   padding-bottom: 6px;
-  background-color: rgba(242, 184, 240, 0.72);
+  background-color: white;
 }
 
 body header #dropbox-box #dropbox #dropbox-content span a {
