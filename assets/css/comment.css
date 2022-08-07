@@ -1,44 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Mouse+Memoirs&display=swap");
-#sticky-sidebar {
-  position: fixed;
-  top: 120px;
-  left: 0px;
-  margin: 0px;
+body {
+  display: grid;
+  gap: 6px;
+  grid-template-rows: 72px 45px 1fr;
+}
+
+body h1 {
+  padding-left: 72px;
+  color: grey;
+}
+
+body #section-nav {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 240px;
-  width: 90px;
-  background-color: #6f0955;
+  justify-content: center;
 }
 
-#sticky-sidebar img {
-  height: 51px;
-  width: 45px;
+body #section-nav div {
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: #c8c7c7;
+  color: white;
 }
 
-main {
+body #section-nav #section1 {
+  border: 0px solid;
+  padding: 6px;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 12px;
+}
+
+body #section-nav #section2 {
+  border: 0px solid;
+  padding: 6px;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 21px;
+}
+
+body #section-nav div :hover {
+  color: #fd03e4;
+}
+
+body main {
   width: 100%;
-  height: 1260px;
   display: flex;
+  overflow-y: scroll;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-main #main-container1 {
+body main #main-container1 {
   width: 100%;
   height: 540px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   padding: 21px 0px 21px 0px;
   overflow-y: scroll;
 }
 
-main #main-container1 #heading {
+body main #main-container1 #heading {
   margin: 0;
   font-size: 1rem;
   height: fit-content;
@@ -54,7 +82,7 @@ main #main-container1 #heading {
   box-shadow: #e4e3e4 0px 1px 3px 0px, #d5d4d5 0px 0px 0px 1px;
 }
 
-main #main-container1 #profile-pic-container {
+body main #main-container1 #profile-pic-container {
   width: 360px;
   height: fit-content;
   padding: 30px;
@@ -69,21 +97,21 @@ main #main-container1 #profile-pic-container {
   box-shadow: #e4e3e4 0px 1px 3px 0px, #d5d4d5 0px 0px 0px 1px;
 }
 
-main #main-container1 #profile-pic-container #profile-pic {
+body main #main-container1 #profile-pic-container #profile-pic {
   height: 72px;
   width: 72px;
   border: 1px solid;
   border-radius: 50%;
 }
 
-main #main-container1 #profile-pic-container input {
+body main #main-container1 #profile-pic-container input {
   background-color: transparent !important;
   border: none !important;
   font-size: 1rem;
   text-align: center;
 }
 
-main #main-container1 #other-details {
+body main #main-container1 #other-details {
   width: 420px;
   height: fit-content;
   display: grid;
@@ -93,7 +121,7 @@ main #main-container1 #other-details {
   padding-bottom: 21px;
 }
 
-main #main-container1 #other-details > div {
+body main #main-container1 #other-details > div {
   box-shadow: #e4e3e4 0px 1px 3px 0px, #d5d4d5 0px 0px 0px 1px;
   height: 45px;
   width: 360px;
@@ -107,30 +135,31 @@ main #main-container1 #other-details > div {
   background-image: none !important;
 }
 
-main #main-container1 #other-details > div .name {
+body main #main-container1 #other-details > div .name {
   font-size: 0.81rem;
   color: #696868;
 }
 
-main #main-container1 #other-details > div form {
+body main #main-container1 #other-details > div form {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main #main-container1 #other-details > div form input {
+body main #main-container1 #other-details > div form input {
   background-color: transparent;
   border: none !important;
   font-size: 1rem;
 }
 
-main #main-container2 {
+body main #main-container2 {
   height: fit-content;
   width: fit-content;
   display: inline-block;
+  overflow-y: scroll;
 }
 
-main #main-container2 form {
+body main #main-container2 form {
   width: 720px;
   height: 600px;
   overflow-y: scroll;
@@ -146,7 +175,7 @@ main #main-container2 form {
   padding-bottom: 21px !important;
 }
 
-main #main-container2 form .question-container {
+body main #main-container2 form .question-container {
   width: 540px;
   height: fit-content;
   border: 0px solid;
@@ -164,7 +193,7 @@ main #main-container2 form .question-container {
   padding-bottom: 21px !important;
 }
 
-main #main-container2 form .question-container textarea {
+body main #main-container2 form .question-container textarea {
   border: 0px solid;
   border-radius: 0.3rem;
   display: inline-block;
@@ -176,15 +205,15 @@ main #main-container2 form .question-container textarea {
   font-family: 'Caveat', cursive;
 }
 
-main #main-container2 form .question-container textarea:focus-visible {
+body main #main-container2 form .question-container textarea:focus-visible {
   outline: none;
 }
 
-main #main-container2 form .question-container:focus-within {
+body main #main-container2 form .question-container:focus-within {
   box-shadow: 0 0 6px 3px #f690dd;
 }
 
-main #main-container2 form button {
+body main #main-container2 form button {
   background-color: #E35BEB;
   color: white;
   font-weight: 900;

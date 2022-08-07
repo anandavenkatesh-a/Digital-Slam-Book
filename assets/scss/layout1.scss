@@ -4,39 +4,37 @@ body{
     padding: 0;
     margin: 0;
     height:100vh;
+    overflow-y: hidden;
     background-color: rgb(241, 239, 241);
-    header{
-        box-shadow: rgba(40, 40, 80, 0.1) 0px 1px 0px;
-        
-        width:100%;
-        height: 63px;
-        background-color: #E35BEB;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        h1{
+    #sidebar-nav{
+         width:51px;
+         height:100vh;
+         position: absolute;
+         left:0px;
+         top:0px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         background-color:#444044;
+
+         #logo{
+            margin-top: 12px;
+            height:fit-content;
             width:fit-content;
-            height: 30px;
-            display: inline-block;
-            color:white;
-            font-size: 2.4rem;
-            padding:0px;
-            margin:0px;
             display: flex;
             justify-content: center;
             align-items: center;
             img{
-                height:32px;
-                width: 32px;
-                margin-right: -18px;
+                height:51px;
+                width: 51px;
             }
-        }
-        nav{
-            width: 180px;
-            height: 63px;
-            padding-left:18px;
-            padding-right:18px;
+         }
+         nav{
+            width: 100%;
+            height: 180;
             display: flex;
+            flex-direction: column;
             justify-content: space-around;
             align-items: center;
             font-size:1.5rem;
@@ -45,98 +43,45 @@ body{
                 box-sizing: border-box;
                 height:100%;
                 width: 45px;
-                padding-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
+                padding:12px 0px 12px 0px;
             }
             span a{
-                color:white;
+                color:rgb(131, 130, 131);
                 text-decoration: none;
             }
             
             span:hover{
                 a{
-                  color:#632766;
+                  color:#ffffff;
                 }
                 border:0px;
-                border-bottom: 4px solid #632766;
             }
         }
-
         #logout{
-            padding-left: 105px;
-            color:#e31d1d;
-            text-decoration: none;
+            color:white;
+            height:fit-content;
+            width:fit-content;
+            font-size: 1.5rem;
+            margin-bottom:12px !important;
         }
-        #dropbox-box{
-            width: 150px;
-            height:100%;
-            position: relative;
-            box-sizing: border-box;
-            padding-top:15px;
-            #dropbox
-            {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                width: 150px;
-                height:fit-content;
-                position: absolute;
-                
-                #dropbox-button{
-                    height: 27px;
-                    width: 27px;
-                    padding:0;
-                    margin: 0;
-                    border:0px solid;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color:transparent;
-                    img{
-                        height: 15px;
-                        width: 15px;
-                    }
-                }
-                #dropbox-content{
-                    display: none;
-                    height:fit-content;
-                    width:fit-content;
-                    z-index: 3;
-                    span{
-                    width: 150px;
-                    height:fit-content;
-                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-                        padding-top:6px;
-                        padding-bottom:6px;
-                        background-color:white;
-                        a{
-                            padding:0;
-                            text-decoration: none;
-                        }
-                    }
-                    span:hover{
-                        transform: scale(1.02) !important;
-                    }
-                }
-                .dropbox-content-flex{
-                    display: flex !important;
-                    flex-direction: column !important;
-                    justify-content: space-around !important;
-                    align-items: center !important;
-                }
-            }
-        
+        #logout:hover{
+            color:#f791ef;
         }
-        
-
     }
 }
+        
+       
 .nav-highlight{
     a{
-        color:#632766;
+        color:#ffffff !important;
     }
     border:0px;
-    border-bottom: 4px solid #632766;
+    border-left: 4px solid #ffffff;
+}
+.nav-highlight:hover{
+    border-left: 4px solid #ffffff !important;
 }

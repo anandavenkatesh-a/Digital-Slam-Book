@@ -3,11 +3,17 @@
 <link rel="stylesheet" href="/css/comment.css">
 
 
+<h1 id = 'heading'>Comments</h1>
+
+
+<div id="section-nav">
+    <div id="section1"><i class="fa-solid fa-user"></i></div>    
+    <div id="section2"><i class="fa-solid fa-pen-to-square"></i></div>
+</div>
 <main>
 
  
     <div id ='main-container1'>
-        <h1 id = 'heading'>Comments</h1>
      
         <div id = 'profile-pic-container'>
           <div id="profile-pic"
@@ -98,6 +104,31 @@
     </div>
 </main>
 <script src="/js/comment.js"></script>
+<script>
+    const Section = document.querySelector('main');
+    const ProfileSection = Section.querySelector('#main-container1');
+    const CommentSection = Section.querySelector('#main-container2');
+    const section1 = document.querySelector('#section1');
+    const section2 = document.querySelector('#section2');
+    Section.removeChild(ProfileSection);
+    Section.removeChild(CommentSection);
+    section1.addEventListener('click',() => {
+        try{CommentSection.remove()}catch{}
+        section2.style.color = 'white';
+        Section.appendChild(ProfileSection);
+        section1.style.color = '#fd03e4';
+    });
+    section2.addEventListener('click',() => {
+        try{ProfileSection.remove()}catch{}
+        section1.style.color = 'white';
+        Section.appendChild(CommentSection);
+        section2.style.color = '#fd03e4';
+    })
+    try{CommentSection.remove()}catch{}
+        section2.style.color = 'white';
+        Section.appendChild(ProfileSection);
+        section1.style.color = '#fd03e4';
+</script>
 <script>
     const main_container1 = document.querySelector('#main-container1');
     const inputs = main_container1.querySelectorAll('input');

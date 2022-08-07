@@ -6,183 +6,208 @@
 $containers-color:#ffffff;
 
 
-#sticky-sidebar{
-    position: fixed;
-    top:120px;
-    left:0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 240px;
-    width:90px;
-    background-color:#6f0955;
-    img{
-        height: 51px;
-        width:45px;
+body{
+    display: grid;
+    gap: 6px;
+    grid-template-rows: 72px 45px 1fr;
+    h1{
+        padding-left:72px;
+        color:grey;
     }
-}
-main{
-    width:100%;
-    height:1260px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    #main-container1{
-        width:100%;
-        height: 540px;
+    #section-nav{
+        height:100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    
-        padding: 21px 0px 21px 0px;
+        justify-content: center;
+        div{
+            display: inline-block;
+            font-size: 1.5rem;
+            background-color: rgb(200, 199, 199);
+            color:white;
+        }
+        #section1{
+            border:0px solid;
+            padding:6px;
+            border-radius: 1rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            padding-right: 12px;
+        }
+        #section2{
+            border:0px solid;
+            padding:6px;
+            border-radius: 1rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            padding-left: 21px;
+        }
+        div :hover{
+            color:#fd03e4;
+        }
+    }
+    main{
+        width:100%;
+        display: flex;
         overflow-y: scroll;
-        #heading{
-            margin:0;
-            font-size: 1rem;
-            height:fit-content;
-            width:fit-content;
-            padding-left:21px;
-            padding-right:21px;
-            padding-top: 12px;
-            padding-bottom: 12px;
-            border:0px solid;
-            border-radius: 0.5rem;
-            background-color: $containers-color;
-            margin:21px;
-            box-shadow: rgb(228, 227, 228) 0px 1px 3px 0px, rgb(213, 212, 213) 0px 0px 0px 1px;
-
-        }
-        #profile-pic-container
-        {
-            width: 360px;
-            height:fit-content;
-            padding:30px;
-            position: relative;
-            padding:0;
-            display: flex;
-            justify-content: space-between;
-            border:0px solid;
-            border-radius: 0.5rem;
-            background-color: $containers-color;
-            padding:12px;
-            box-shadow: rgb(228, 227, 228) 0px 1px 3px 0px, rgb(213, 212, 213) 0px 0px 0px 1px;
-            #profile-pic{
-                height:72px;
-                width:72px;
-                border:1px solid;
-                border-radius: 50%;
-            }
-            input{
-                background-color: transparent !important;
-                border: none !important;
-                font-size: 1rem;
-                text-align: center;
-            }
-        }
-        
-        #other-details{
-            width:420px;
-            height:fit-content;
-            display: grid;
-            justify-items: center;
-            gap:3px;   
-            padding-top:21px;
-            padding-bottom: 21px;
-        }
-        #other-details > div{
-            box-shadow: rgb(228, 227, 228) 0px 1px 3px 0px, rgb(213, 212, 213) 0px 0px 0px 1px;
-            height:45px;
-            width:360px;
-            border:0px solid;
-            border-radius: 0.5rem;
-            background-color: $containers-color;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #main-container1{
+            width:100%;
+            height: 540px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            padding:12px !important;
-            background-image: none !important;
-            .name{
-                font-size: 0.81rem;
-                color: rgb(105, 104, 104);
+            justify-content: flex-start;
+            align-items: center;
+        
+            padding: 21px 0px 21px 0px;
+            overflow-y: scroll;
+            #heading{
+                margin:0;
+                font-size: 1rem;
+                height:fit-content;
+                width:fit-content;
+                padding-left:21px;
+                padding-right:21px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border:0px solid;
+                border-radius: 0.5rem;
+                background-color: $containers-color;
+                margin:21px;
+                box-shadow: rgb(228, 227, 228) 0px 1px 3px 0px, rgb(213, 212, 213) 0px 0px 0px 1px;
+    
             }
-            form{
+            #profile-pic-container
+            {
+                width: 360px;
+                height:fit-content;
+                padding:30px;
+                position: relative;
+                padding:0;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                border:0px solid;
+                border-radius: 0.5rem;
+                background-color: $containers-color;
+                padding:12px;
+                box-shadow: rgb(228, 227, 228) 0px 1px 3px 0px, rgb(213, 212, 213) 0px 0px 0px 1px;
+                #profile-pic{
+                    height:72px;
+                    width:72px;
+                    border:1px solid;
+                    border-radius: 50%;
+                }
                 input{
-                    background-color: transparent;
+                    background-color: transparent !important;
                     border: none !important;
                     font-size: 1rem;
+                    text-align: center;
                 }
             }
-        }
-    }
-       
-    #main-container2{
-        height: fit-content;
-        width: fit-content;
-        display: inline-block;
-        form{
-            width: 720px;
-            height: 600px;
-            overflow-y: scroll;
-            border:0px solid;
-            border-radius: 0.5rem;
-            display: grid;
-            gap:21px;
-            justify-content: center;
-            margin-top: 30px;
-            background-image: url('https://cdn.pixabay.com/photo/2018/03/02/19/46/rose-petals-3194062__340.jpg');
-            background-position: center;
-            padding-top: 21px !important;
-            padding-bottom: 21px !important;
-            .question-container{
-                width:540px;
+            
+            #other-details{
+                width:420px;
                 height:fit-content;
+                display: grid;
+                justify-items: center;
+                gap:3px;   
+                padding-top:21px;
+                padding-bottom: 21px;
+            }
+            #other-details > div{
+                box-shadow: rgb(228, 227, 228) 0px 1px 3px 0px, rgb(213, 212, 213) 0px 0px 0px 1px;
+                height:45px;
+                width:360px;
                 border:0px solid;
-                border-radius: 0.3rem;
+                border-radius: 0.5rem;
+                background-color: $containers-color;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
-                backdrop-filter: blur(6px);
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                color:#6f0955;
-                font-weight:900;
-                font-size: 1.8rem;
-                font-family: 'Mouse Memoirs', sans-serif;
+                justify-content: space-between;
+                padding:12px !important;
+                background-image: none !important;
+                .name{
+                    font-size: 0.81rem;
+                    color: rgb(105, 104, 104);
+                }
+                form{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    input{
+                        background-color: transparent;
+                        border: none !important;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+           
+        #main-container2{
+            height: fit-content;
+            width: fit-content;
+            display: inline-block;
+            overflow-y: scroll;
+            form{
+                width: 720px;
+                height: 600px;
+                overflow-y: scroll;
+                border:0px solid;
+                border-radius: 0.5rem;
+                display: grid;
+                gap:21px;
+                justify-content: center;
+                margin-top: 30px;
+                background-image: url('https://cdn.pixabay.com/photo/2018/03/02/19/46/rose-petals-3194062__340.jpg');
+                background-position: center;
+                padding-top: 21px !important;
                 padding-bottom: 21px !important;
-                textarea{
+                .question-container{
+                    width:540px;
+                    height:fit-content;
                     border:0px solid;
                     border-radius: 0.3rem;
-                    display: inline-block;
-                    width:510px;
-                    height:120px;
-                    background-color: #f4b4f7;
-                    color:black;
-                    font-size: 2.1rem;
-                    font-family: 'Caveat', cursive;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    backdrop-filter: blur(6px);
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    color:#6f0955;
+                    font-weight:900;
+                    font-size: 1.8rem;
+                    font-family: 'Mouse Memoirs', sans-serif;
+                    padding-bottom: 21px !important;
+                    textarea{
+                        border:0px solid;
+                        border-radius: 0.3rem;
+                        display: inline-block;
+                        width:510px;
+                        height:120px;
+                        background-color: #f4b4f7;
+                        color:black;
+                        font-size: 2.1rem;
+                        font-family: 'Caveat', cursive;
+                    }
+                    textarea:focus-visible{
+                        outline: none;
+                    }
+                    
                 }
-                textarea:focus-visible{
-                    outline: none;
+                .question-container:focus-within{
+                  box-shadow: 0 0 6px 3px rgb(246, 144, 221);
                 }
-                
-            }
-            .question-container:focus-within{
-              box-shadow: 0 0 6px 3px rgb(246, 144, 221);
-            }
-            button{
-                background-color: #E35BEB;
-                color:white;
-                font-weight: 900;
-                font-size: larger;
-                border:0px solid;
-                border-radius: 0.3rem;
+                button{
+                    background-color: #E35BEB;
+                    color:white;
+                    font-weight: 900;
+                    font-size: larger;
+                    border:0px solid;
+                    border-radius: 0.3rem;
+                }
             }
         }
     }
-}
+        
     
+}

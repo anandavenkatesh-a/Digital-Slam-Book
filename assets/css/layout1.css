@@ -2,151 +2,93 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  overflow-y: hidden;
   background-color: #f1eff1;
 }
 
-body header {
-  box-shadow: rgba(40, 40, 80, 0.1) 0px 1px 0px;
-  width: 100%;
-  height: 63px;
-  background-color: #E35BEB;
+body #sidebar-nav {
+  width: 51px;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+  background-color: #444044;
 }
 
-body header h1 {
+body #sidebar-nav #logo {
+  margin-top: 12px;
+  height: fit-content;
   width: fit-content;
-  height: 30px;
-  display: inline-block;
-  color: white;
-  font-size: 2.4rem;
-  padding: 0px;
-  margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body header h1 img {
-  height: 32px;
-  width: 32px;
-  margin-right: -18px;
+body #sidebar-nav #logo img {
+  height: 51px;
+  width: 51px;
 }
 
-body header nav {
-  width: 180px;
-  height: 63px;
-  padding-left: 18px;
-  padding-right: 18px;
+body #sidebar-nav nav {
+  width: 100%;
+  height: 180;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-size: 1.5rem;
   color: white;
 }
 
-body header nav span {
+body #sidebar-nav nav span {
   box-sizing: border-box;
   height: 100%;
   width: 45px;
-  padding-top: 15px;
-  text-align: center;
-}
-
-body header nav span a {
-  color: white;
-  text-decoration: none;
-}
-
-body header nav span:hover {
-  border: 0px;
-  border-bottom: 4px solid #632766;
-}
-
-body header nav span:hover a {
-  color: #632766;
-}
-
-body header #logout {
-  padding-left: 105px;
-  color: #e31d1d;
-  text-decoration: none;
-}
-
-body header #dropbox-box {
-  width: 150px;
-  height: 100%;
-  position: relative;
-  box-sizing: border-box;
-  padding-top: 15px;
-}
-
-body header #dropbox-box #dropbox {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  width: 150px;
-  height: fit-content;
-  position: absolute;
-}
-
-body header #dropbox-box #dropbox #dropbox-button {
-  height: 27px;
-  width: 27px;
-  padding: 0;
-  margin: 0;
-  border: 0px solid;
-  border-radius: 50%;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: transparent;
+  text-align: center;
+  padding: 12px 0px 12px 0px;
 }
 
-body header #dropbox-box #dropbox #dropbox-button img {
-  height: 15px;
-  width: 15px;
+body #sidebar-nav nav span a {
+  color: #838283;
+  text-decoration: none;
 }
 
-body header #dropbox-box #dropbox #dropbox-content {
-  display: none;
+body #sidebar-nav nav span:hover {
+  border: 0px;
+}
+
+body #sidebar-nav nav span:hover a {
+  color: #ffffff;
+}
+
+body #sidebar-nav #logout {
+  color: white;
   height: fit-content;
   width: fit-content;
-  z-index: 3;
+  font-size: 1.5rem;
+  margin-bottom: 12px !important;
 }
 
-body header #dropbox-box #dropbox #dropbox-content span {
-  width: 150px;
-  height: fit-content;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  background-color: white;
-}
-
-body header #dropbox-box #dropbox #dropbox-content span a {
-  padding: 0;
-  text-decoration: none;
-}
-
-body header #dropbox-box #dropbox #dropbox-content span:hover {
-  transform: scale(1.02) !important;
-}
-
-body header #dropbox-box #dropbox .dropbox-content-flex {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-around !important;
-  align-items: center !important;
+body #sidebar-nav #logout:hover {
+  color: #f791ef;
 }
 
 .nav-highlight {
   border: 0px;
-  border-bottom: 4px solid #632766;
+  border-left: 4px solid #ffffff;
 }
 
 .nav-highlight a {
-  color: #632766;
+  color: #ffffff !important;
+}
+
+.nav-highlight:hover {
+  border-left: 4px solid #ffffff !important;
 }

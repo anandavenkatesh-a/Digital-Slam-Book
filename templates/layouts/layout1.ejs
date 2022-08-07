@@ -12,33 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <%- style %>
 </head>
-<body>
-    <header> 
-        <h1>
-            <span>
-                <img src="/images/icon2.png" id = 'heading-icon'>
-            </span>
-        </h1>
-        <nav>
-            <span id='home-nav'><a href="/user/home"><i class="fa-solid fa-house" ></i></a></span>
-            <span id = 'profile-nav'><a href="/user/profile"><i class="fa-solid fa-user"></i></a></span>
-            <span id='friends-nav'><a href="/user/friends"><i class="fa-solid fa-user-group"></i></a></span>
-        </nav>
-        <script src="/js/layout1.js"></script>
+<body> 
+   <div id="sidebar-nav">
+      <span id="logo">
+         <img src="/images/logo.png" id = 'heading-icon'>
+      </span>
+  
+      <nav>
+        <span id='home-nav'><a href="/user/home"><i class="fa-solid fa-house" ></i></a></span>
+        <span id = 'profile-nav'><a href="/user/profile"><i class="fa-solid fa-user"></i></a></span>
+        <span id='friends-nav'><a href="/user/friends"><i class="fa-solid fa-user-group"></i></a></span>
+      </nav>
+  
+      <span><a href="/user/sign-out" id = 'logout'><i class="fa-solid fa-arrow-right-from-bracket" ></i></a></span>
 
-        
-        
-        
-
-        <span><a href="/user/sign-out" id = 'logout'><i class="fa-solid fa-arrow-right-from-bracket" ></i></a></span>
-    </header>
+   </div> 
+    
+    <script src="/js/layout1.js"></script>
 
     <%- body %>
 
     <%- script %>
 </body>
-
-
 <script>
     const header = document.querySelector('header');
     
