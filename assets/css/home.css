@@ -1,3 +1,10 @@
+main {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 60px 1fr;
+}
+
 h1 {
   color: grey;
   font-size: 1.5rem;
@@ -5,7 +12,7 @@ h1 {
   margin-bottom: 0px;
 }
 
-main {
+#main-container {
   display: flex;
   height: 100vh;
   width: 100%;
@@ -15,7 +22,7 @@ main {
   background-color: #f1eff1;
 }
 
-main #search-bar-container {
+#main-container #search-bar-container {
   height: fit-content;
   width: fit-content;
   border: 0px solid;
@@ -29,13 +36,13 @@ main #search-bar-container {
   margin: 30px 0px 21px 0px;
 }
 
-main #search-bar-container span {
+#main-container #search-bar-container span {
   display: inline-block;
   height: fit-content;
   width: fit-content;
 }
 
-main #search-bar-container #search-bar {
+#main-container #search-bar-container #search-bar {
   display: inline-block;
   height: 36px;
   width: 600px;
@@ -44,7 +51,7 @@ main #search-bar-container #search-bar {
   border: 0px solid;
 }
 
-main #search-container-wrapper {
+#main-container #search-container-wrapper {
   width: 100%;
   display: flex;
   height: 100vh;
@@ -53,7 +60,7 @@ main #search-container-wrapper {
   overflow-y: scroll;
 }
 
-main #search-container-wrapper #search-result-container {
+#main-container #search-container-wrapper #search-result-container {
   height: fit-content;
   width: 810px;
   background-color: transparent;
@@ -62,7 +69,7 @@ main #search-container-wrapper #search-result-container {
   justify-items: center;
 }
 
-main #search-container-wrapper #search-result-container .search-result {
+#main-container #search-container-wrapper #search-result-container .search-result {
   height: 69px;
   width: 87%;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -75,18 +82,18 @@ main #search-container-wrapper #search-result-container .search-result {
   align-items: center;
 }
 
-main #search-container-wrapper #search-result-container .search-result a img {
+#main-container #search-container-wrapper #search-result-container .search-result a img {
   height: 32px;
   width: 32px;
 }
 
-main #search-container-wrapper #search-result-container .search-result > div {
+#main-container #search-container-wrapper #search-result-container .search-result > div {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-main #search-container-wrapper #search-result-container .search-result > div .users-profile-pic {
+#main-container #search-container-wrapper #search-result-container .search-result > div .users-profile-pic {
   height: 60px;
   width: 60px;
   border: 0px solid;
@@ -98,13 +105,13 @@ main #search-container-wrapper #search-result-container .search-result > div .us
   display: inline-block;
 }
 
-main #search-container-wrapper #search-result-container .search-result > div .users-name {
+#main-container #search-container-wrapper #search-result-container .search-result > div .users-name {
   font-size: 1.5rem;
   font-family: 'Dancing Script', cursive;
   font-weight: 900;
 }
 
-main #search-container-wrapper #search-result-container .search-result:hover {
+#main-container #search-container-wrapper #search-result-container .search-result:hover {
   transform: scale(1.011);
 }
 

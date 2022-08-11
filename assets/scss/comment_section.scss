@@ -1,0 +1,83 @@
+
+
+#main-container2{
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    justify-items: center;
+    align-items: center;
+    i{
+        font-size: 2.1rem;
+        color:gray;
+        height:fit-content;
+        width: fit-content;
+        padding:12px;
+        border:0px solid;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    form{
+        width: 630px;
+        height: fit-content;
+        overflow-y: scroll;
+        border:0px solid;
+        border-radius: 0.5rem;
+        display: grid;
+        gap:21px;
+        grid-template-rows: 61.5px 1fr 21px;
+        justify-content: center;
+        margin-top: 30px;
+        background-position: center;
+        padding-top: 21px !important;
+        padding-bottom: 21px !important;
+        #comment-nav{
+            display: flex;
+            justify-content: center;
+        }
+        .question-container{
+            width:540px;
+            height:fit-content;
+            border:0px solid;
+            border-radius: 0.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            backdrop-filter: blur(6px);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            color:#6f0955;
+            font-weight:900;
+            font-size: 1.8rem;
+            font-family: 'Mouse Memoirs', sans-serif;
+            padding-bottom: 21px !important;
+            textarea{
+                border:0px solid;
+                border-radius: 0.3rem;
+                display: inline-block;
+                width:510px;
+                height:120px;
+                background-color: #f4b4f7;
+                color:black;
+                font-size: 2.1rem;
+                font-family: 'Caveat', cursive;
+            }
+            textarea:focus-visible{
+                outline: none;
+            }
+            
+        }
+        .question-container:focus-within{
+          box-shadow: 0 0 6px 3px rgb(246, 144, 221);
+        }
+        button{
+            background-color: #E35BEB;
+            color:white;
+            font-weight: 900;
+            font-size: larger;
+            border:0px solid;
+            border-radius: 0.3rem;
+        }
+    }
+}

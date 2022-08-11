@@ -3,137 +3,22 @@
 <link rel="stylesheet" href="/css/comment.css">
 
 
-<h1 id = 'heading'>Comments</h1>
-
-
-<div id="section-nav">
-    <div id="section1"><i class="fa-solid fa-user"></i></div>    
-    <div id="section2"><i class="fa-solid fa-pen-to-square"></i></div>
-</div>
 <main>
-
- 
-    <div id ='main-container1'>
-     
-        <div id = 'profile-pic-container'>
-          <div id="profile-pic"
-              style="background-image: url(<%= locals.comments[0].to.avatar %>);
-              background-position: center;
-              background-size:144%;"
-          ></div>
-            <input type="text" value="<%= locals.comments[0].to.name %>" name="name">
-        </div>
-     
-        <div id ='other-details'>
-     
-         <div>
-             <span class="name">Passout?</span>
-             <form action="">
-                 <div>
-                    <%if(locals.comments[0].to.year == 'past'){%>
-                       <label for="radio-yes">yes</label><input id ='radio-yes' type="radio" name="ans" value="yes" checked="true">
-                       <label for="radio-no">no</label><input id="radio-no" type="radio" name="ans" value="no">
-                    <%}else{%>
-                        <label for="radio-yes">yes</label><input id ='radio-yes' type="radio" name="ans" value="yes">
-                        <label for="radio-no">no</label><input id="radio-no" type="radio" name="ans" value="no" checked="true">
-                    <%}%>     
-                 </div>
-             </form>
-          </div>
-     
-           <div>
-               <span class ='name'>Department</span>
-               <form action="">
-                   <input type="text" value="<%= locals.comments[0].to.dept %>" name="dept">
-               </form>
-           </div>
-     
-           <div>
-              <span class ='name'>Year</span>
-              <form action="">
-                 <input type="text" value="<%= locals.comments[0].to.acc_year %>" name="acc_year">
-             </form>
-          </div>
-     
-          <div>
-             <span class ='name'>Hostel</span>
-             <form action="">
-              <input type="text" value="<%= locals.comments[0].to.hostel %>" name="hostel">
-             </form>
-          </div>
-     
-          <div>
-             <span class ='name'>Password</span>
-             <form action="">
-              <input type="password" value="<%= locals.comments[0].to.password %>" name="password">
-          </form>
-          </div>
-        </div>
-     
-     </div>
-     
+    <h1 id = 'heading'>Comments</h1>
 
 
-
-
-
-    <div id = 'main-container2'>
-        <form action= '/comment/update?id=<%= locals.comments[0]._id %>' method="post">
-            <div class="question-container" spellcheck="false" >
-                <label for="q1">Your name</label>
-                <textarea name="q1" id="q1" cols="30" rows="10"><%= locals.comments[0].q1 %></textarea>
-            </div>
-            <div class="question-container" spellcheck="false">
-                <label for="q2">What have u acheived</label>
-                <textarea name="q2" id="q2" cols="30" rows="10"><%= locals.comments[0].q2 %></textarea>
-            </div>
-            <div class="question-container" spellcheck="false">
-                <label for="q3">What makes u differnt from others</label>
-                <textarea name="q3" id="q3" cols="30" rows="10"><%= locals.comments[0].q3 %></textarea>
-            </div>
-            <div class="question-container" spellcheck="false">
-                <label for="q4">Your hobbies</label>
-                <textarea name="q4" id="q4" cols="30" rows="10"><%= locals.comments[0].q4 %></textarea>
-            </div>
-            <div class="question-container" spellcheck="false">
-                <label for="q5">Your ambition</label>
-                <textarea name="q5" id="q5" cols="30" rows="10"><%= locals.comments[0].q5 %></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+    <div id="section-nav">
+        <div id="section1"><i class="fa-solid fa-user"></i></div>    
+        <div id="section2"><i class="fa-solid fa-pen-to-square"></i></div>
+    </div>
+    <div id="main-container">
+    
+     
+        <%- include('partials/_profile_section') %>
+         
+         <%- include('partials/_comment_section') %>
     </div>
 </main>
-<script src="/js/comment.js"></script>
-<script>
-    const Section = document.querySelector('main');
-    const ProfileSection = Section.querySelector('#main-container1');
-    const CommentSection = Section.querySelector('#main-container2');
-    const section1 = document.querySelector('#section1');
-    const section2 = document.querySelector('#section2');
-    Section.removeChild(ProfileSection);
-    Section.removeChild(CommentSection);
-    section1.addEventListener('click',() => {
-        try{CommentSection.remove()}catch{}
-        section2.style.color = 'white';
-        Section.appendChild(ProfileSection);
-        section1.style.color = '#fd03e4';
-    });
-    section2.addEventListener('click',() => {
-        try{ProfileSection.remove()}catch{}
-        section1.style.color = 'white';
-        Section.appendChild(CommentSection);
-        section2.style.color = '#fd03e4';
-    })
-    try{CommentSection.remove()}catch{}
-        section2.style.color = 'white';
-        Section.appendChild(ProfileSection);
-        section1.style.color = '#fd03e4';
-</script>
-<script>
-    const main_container1 = document.querySelector('#main-container1');
-    const inputs = main_container1.querySelectorAll('input');
-    for(input of inputs)
-    {
-        input.style.pointerEvents = 'none';
-    }
-</script>
+
+<script src="/js/comments_page/initialize_the_page.js"></script>
+<script src="/js/comments_page/comment_section.js"></script>

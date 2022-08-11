@@ -1,0 +1,60 @@
+
+
+<div id ='main-container1'>
+     
+    <div id = 'profile-pic-container'>
+      <div id="profile-pic"
+          style="background-image: url(<%= locals.comments[0].to.avatar %>);
+          background-position: center;
+          background-size:144%;"
+      ></div>
+        <input type="text" value="<%= locals.comments[0].to.name %>" name="name">
+    </div>
+ 
+    <div id ='other-details'>
+ 
+     <div>
+         <span class="name">Passout?</span>
+         <form action="">
+             <div>
+                <%if(locals.comments[0].to.year == 'past'){%>
+                   <label for="radio-yes">yes</label><input id ='radio-yes' type="radio" name="ans" value="yes" checked="true">
+                   <label for="radio-no">no</label><input id="radio-no" type="radio" name="ans" value="no">
+                <%}else{%>
+                    <label for="radio-yes">yes</label><input id ='radio-yes' type="radio" name="ans" value="yes">
+                    <label for="radio-no">no</label><input id="radio-no" type="radio" name="ans" value="no" checked="true">
+                <%}%>     
+             </div>
+         </form>
+      </div>
+ 
+       <div>
+           <span class ='name'>Department</span>
+           <form action="">
+               <input type="text" value="<%= locals.comments[0].to.dept %>" name="dept">
+           </form>
+       </div>
+ 
+       <div>
+          <span class ='name'>Year</span>
+          <form action="">
+             <input type="text" value="<%= locals.comments[0].to.acc_year %>" name="acc_year">
+         </form>
+      </div>
+ 
+      <div>
+         <span class ='name'>Hostel</span>
+         <form action="">
+          <input type="text" value="<%= locals.comments[0].to.hostel %>" name="hostel">
+         </form>
+      </div>
+ 
+      <div>
+         <span class ='name'>Password</span>
+         <form action="">
+          <input type="password" value="<%= locals.comments[0].to.password %>" name="password">
+      </form>
+      </div>
+    </div>
+ 
+ </div>

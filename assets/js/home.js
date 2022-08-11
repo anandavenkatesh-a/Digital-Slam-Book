@@ -36,6 +36,7 @@ $.ajax('/comment/api/get-comments', {
     data: { query: search_bar.value },  // data to submit
     success: function (data, status, xhr) {
         results = data.data;
+        console.log(results);
         renderResults();
     }
 });
