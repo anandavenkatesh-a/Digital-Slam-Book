@@ -27,6 +27,8 @@ module.exports.update_comment = async (req,res) => {
             _id:req.query.id
         });
         
+        console.log(req.body);
+
         comment.q1 = req.body.q1;
         comment.q2 = req.body.q2;
         comment.q3 = req.body.q3;
@@ -34,7 +36,7 @@ module.exports.update_comment = async (req,res) => {
         comment.q5 = req.body.q5;
 
         const result = await comment.save();
-
+        console.log(result);
         return res.redirect('back');
     }
     catch(err)

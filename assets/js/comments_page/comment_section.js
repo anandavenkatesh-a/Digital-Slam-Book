@@ -1,8 +1,11 @@
 
 
+
+
 class CommentsClass{
    constructor(){
        const form = document.querySelector('#main-container2 form');
+       this.data = [];
        this.submit = form.querySelector('button');
        this.submit.remove();
        this.question_containers = [];
@@ -57,7 +60,18 @@ class CommentsClass{
 
         this.right.addEventListener('click',() => {
           this.move(1);
-        });        
+        }); 
+        this.left.addEventListener('click',() => {
+          this.move(-1);
+        });    
+        this.submit.addEventListener('click',(event) => {
+          const form = document.querySelector('#main-container2 form');
+          form.removeChild(form.querySelector(`#q${this.state}`).parentNode);
+          for(let i = 1;i <= 5;i++)
+          {
+             form.appendChild(this.question_containers[i]);               
+          } 
+        })   
    }
    move(step)
    {
@@ -65,12 +79,40 @@ class CommentsClass{
       {
         if(this.state < 5)
         {
+          const form = document.querySelector('#main-container2 form');
+          this.data[this.state] = form.querySelector(`#q${this.state}`).value;
           this.state += 1;
           this.navigator.attr('x',this.nav_pos[this.state]); 
           this.svg.select(`#point${this.state}`)
                 .attr('fill','#f4b4f7');
           this.svg.select(`#point${this.state-1}`)
-                .attr('fill','#f1eff1');           
+                .attr('fill','#f1eff1'); 
+          let id = 'q'+(this.state-1);
+          let prev_q_container = document.getElementById(id).parentNode;  
+          form.removeChild(prev_q_container);
+          this.submit.remove();
+          form.appendChild(this.question_containers[this.state]);
+          form.appendChild(this.submit);
+        }
+      }
+      else if(step == -1)
+      {
+        if(this.state > 1)
+        {
+          const form = document.querySelector('#main-container2 form');
+          this.data[this.state] = form.querySelector(`#q${this.state}`).value;
+          this.state -= 1;
+          this.navigator.attr('x',this.nav_pos[this.state]); 
+          this.svg.select(`#point${this.state}`)
+                .attr('fill','#f4b4f7'); 
+          this.svg.select(`#point${this.state+1}`)
+                 .attr('fill','#f1eff1');
+          let id = 'q'+(this.state+1);
+          let prev_q_container = document.getElementById(id).parentNode;  
+          form.removeChild(prev_q_container);
+          this.submit.remove();
+          form.appendChild(this.question_containers[this.state]);
+          form.appendChild(this.submit);                        
         }
       }
    }
