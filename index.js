@@ -53,10 +53,10 @@ app.use(session({
     })
  }));
  
+
 //set up passport
 app.use(passport.initialize()); 
 app.use(passport.session());
-
 //set user details in res
 app.use(passport.setAuthenticatedUserDetails)
 
