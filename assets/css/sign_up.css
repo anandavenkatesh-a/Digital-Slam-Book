@@ -123,6 +123,43 @@ body #form-container form input {
   width: 180px;
 }
 
+body #form-container form #username-warning {
+  color: red;
+  height: fit-content;
+  width: fit-content;
+  padding: 0px;
+  display: none;
+}
+
+body #form-container form #pass-str {
+  height: 6px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body #form-container form #pass-str div {
+  height: 3px;
+  width: 57px;
+}
+
+body #form-container form #pass-str #low-str {
+  border-bottom-left-radius: 0.6rem;
+  border-top-left-radius: 0.6rem;
+  background-color: red;
+}
+
+body #form-container form #pass-str #med-str {
+  background-color: yellow;
+}
+
+body #form-container form #pass-str #str-str {
+  background-color: green;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+
 body #form-container form button {
   height: 1.5em;
   width: 180px;

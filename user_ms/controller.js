@@ -110,3 +110,25 @@ module.exports.picUpload = async (req,res) => {
     await user.save();
     return res.redirect('/user/profile');
 }; 
+
+module.exports.usernameExists = async (req,res) => {
+    console.log('Anand username');
+    const user = await User.findOne({
+       name:req.body.query
+    });
+
+    let data;
+    if(user)
+    {
+       data = 'y';
+    }
+    else
+    {
+       data = 'n';
+    }
+
+    return res.status(200).json({
+        message:'req succesfull',
+        data:data
+    });
+};

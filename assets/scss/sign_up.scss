@@ -113,6 +113,37 @@ body{
                 width: 180px;
                 
             }
+            #username-warning{
+                color:red;
+                height:fit-content;
+                width: fit-content;
+                padding:0px;
+                display: none;
+            }
+            #pass-str{
+                height:6px;
+                width: 180px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div{
+                    height:3px;
+                    width:57px;
+                }
+                #low-str{
+                    border-bottom-left-radius: 0.6rem;
+                    border-top-left-radius: 0.6rem;
+                    background-color: red;
+                }
+                #med-str{
+                    background-color: yellow;
+                }
+                #str-str{
+                    background-color: green;
+                    border-top-right-radius: 0.6rem;
+                    border-bottom-right-radius: 0.6rem;
+                }
+            }
             button{
                 height: 1.5em;
                 width: 180px;

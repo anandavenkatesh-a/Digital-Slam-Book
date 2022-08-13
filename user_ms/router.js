@@ -33,5 +33,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 
+router.post('/username_exits',controller.usernameExists);
 router.post('/profile/pic_upload',passport.checkAuthentication,upload.single('avatar'),controller.picUpload);
 module.exports = router;
