@@ -6,15 +6,32 @@
 <main>
     <h1>Home</h1>
     <div id="main-container">
-        <div id="search-bar-container"> 
+        <!-- <div id="search-bar-container"> 
             <span class="material-symbols-outlined">search</span>
             <input type="text" id = 'search-bar' placeholder="Search..."> 
+        </div> -->
+        <div id="search">
+            <div id="search-bar-container"> 
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" id = 'search-bar' name='emp_name' placeholder="Search...">
+                <select name="dept">
+                    <option value="" selected>Department</option>
+                </select>
+                <select name="hostel">
+                    <option value="" selected>Hostel</option>
+                </select>
+            </div>
+            <!-- <div id="adv-search">
+                
+            </div> -->
         </div>
-        
+
         <div id = 'search-container-wrapper'>
             <div id = 'search-result-container'></div>
         </div>
+        
     </div>
 </main>
 
+<script src="/js/clg_info.js"></script>
 <script src="/js/home.js"></script>

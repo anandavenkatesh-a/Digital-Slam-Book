@@ -20,32 +20,73 @@ h1{
     justify-content: space-around;
     align-items: center;
     background-color: rgb(241, 239, 241);
-    #search-bar-container{
-      height:fit-content;
-      width: fit-content;
-      border:0px solid;
-      border-radius:2rem;
-      box-shadow: rgb(214, 216, 217) 3px 3px 6px 0px inset, rgb(237, 232, 234) -3px -3px 6px 1px inset;
-      box-shadow: 0 0 2px 1px rgb(246, 144, 221);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding:3px 12px 3px 9px;
-      margin: 30px 0px 21px 0px;
-      span{
-        display: inline-block;
-        height: fit-content;
-        width: fit-content;
+    #search{
+      #search-bar-container{
+          #search-bar{
+              display: inline-block;
+              height: 36px;
+              width:600px !important;
+              background-color:#f6f4f6;
+              font-size: larger;
+              border: 0px solid;
+          }
+          height:fit-content;
+          width: fit-content;
+          border:0px solid;
+          border-radius:2rem;
+          // box-shadow: rgb(214, 216, 217) 3px 3px 6px 0px inset, rgb(237, 232, 234) -3px -3px 6px 1px inset;
+          // box-shadow: 0 0 2px 1px rgb(144, 163, 246);
+          box-shadow: rgb(214, 216, 217) 3px 3px 6px 0px inset, rgb(237, 232, 234) -3px -3px 6px 1px inset;
+          box-shadow: 0 0 2px 1px rgb(246, 144, 221);
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding:3px 12px 3px 9px;
+          margin: 30px 0px 21px 0px;
+          span{
+            display: inline-block;
+            height: fit-content;
+            width: fit-content;
+          }
+          select{
+            background-color:rgb(246, 144, 221);
+            color:white;
+            font-weight: 900;
+          }
       }
-      #search-bar{
-        display: inline-block;
-        height: 36px;
-        width:600px;
-        background-color:#f6f4f6;
-        font-size: larger;
-        border: 0px solid;
+      #adv-search{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap;
       }
-    }
+  }
+    // #search-bar-container{
+    //   height:fit-content;
+    //   width: fit-content;
+    //   border:0px solid;
+    //   border-radius:2rem;
+      // box-shadow: rgb(214, 216, 217) 3px 3px 6px 0px inset, rgb(237, 232, 234) -3px -3px 6px 1px inset;
+      // box-shadow: 0 0 2px 1px rgb(246, 144, 221);
+    //   display: flex;
+    //   justify-content: space-around;
+    //   align-items: center;
+    //   padding:3px 12px 3px 9px;
+    //   margin: 30px 0px 21px 0px;
+    //   span{
+    //     display: inline-block;
+    //     height: fit-content;
+    //     width: fit-content;
+    //   }
+    //   #search-bar{
+    //     display: inline-block;
+    //     height: 36px;
+    //     width:600px;
+    //     background-color:#f6f4f6;
+    //     font-size: larger;
+    //     border: 0px solid;
+    //   }
+    // }
     #search-container-wrapper{
       width:100%;
       display: flex;
@@ -86,14 +127,15 @@ h1{
             width:60px;
             border:0px solid;
             border-radius: 50%;
-            background-image: url('https://iconape.com/wp-content/files/im/10836/png/iconfinder_3_avatar_2754579.png');
+            // background-image: url('https://iconape.com/wp-content/files/im/10836/png/iconfinder_3_avatar_2754579.png');
             // background-image: url('https://cdn-icons-png.flaticon.com/512/848/848006.png');
             // background-image: url('https://cdn-icons-png.flaticon.com/512/848/848043.png');
             // background-image: url('../images/user.png');
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             margin: 9px !important;
             display: inline-block;
+            background-repeat: no-repeat;
           }
           .users-name{
             font-size: 1.5rem;

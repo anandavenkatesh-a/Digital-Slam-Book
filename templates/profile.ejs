@@ -3,8 +3,7 @@
 <link rel="stylesheet" href="/css/profile.css">
 <main>
    <h1 id = 'heading'>My Account</h1>
-   <div id ='main-container'>
-
+   <form id ='main-container' method="post" action="/user/profile/update?id=<%= locals.user._id %>">
     <div id = 'profile-pic-container'>
       <div id="profile-pic"
           style="background-image: url('<%= locals.user.avatar %>');
@@ -12,62 +11,76 @@
           background-size:144%;"
       ></div>
       <button id="profile-pic-edit"><i class="fa-solid fa-pen"></i></button>
-      <form action="">
-          <input type="text" value="<%= locals.user.name %>" name="name">
+      <div class="input-container">
+          <input type="text" value="<%= locals.user.name %>" name="name" class="input">
           <button type="submit" class="edit">edit</button>
-      </form>
+      </div>
     </div>
  
+
     <div id ='other-details'>
  
      <div>
          <span class="name">Passout?</span>
-         <form action="">
+         <div class="input-container">
              <div>
-                 <label for="radio-yes">yes</label><input id ='radio-yes' type="radio" name="ans" value="yes" checked="true">
-                 <label for="radio-no">no</label><input id="radio-no" type="radio" name="ans" value="no">
+                 <label for="radio-yes">yes</label><input class="input" id ='radio-yes' type="radio" name="ans" value="yes" checked="true">
+                 <label for="radio-no">no</label><input class="input" id="radio-no" type="radio" name="ans" value="no">
              </div>
              <button class = 'edit'>edit</button>
-         </form>
+         </div>
       </div>
  
        <div>
            <span class ='name'>Department</span>
-           <form action="">
-               <input type="text" value="<%= locals.user.dept %>" name="dept">
+           <div class="input-container">
+               <select class="input" name="dept" data-value="<%= locals.user.dept %>">
+                   
+               </select> 
                <button class="edit">edit</button>
-           </form>
+           </div>
        </div>
  
        <div>
           <span class ='name'>Year</span>
-          <form action="">
-             <input type="text" value="<%= locals.user.acc_year %>" name="acc_year">
+          <div class="input-container">
+             <input class="input" type="number" value="<%= locals.user.acc_year %>" name="acc_year" min="1" max="4">
              <button class="edit">edit</button>
-         </form>
+          </div>
       </div>
  
       <div>
          <span class ='name'>Hostel</span>
-         <form action="">
-          <input type="text" value="<%= locals.user.hostel %>" name="hostel">
+         <div class="input-container">
+          <select class="input" name="hostel" data-value="<%= locals.user.hostel %>">
+             
+          </select>  
           <button class="edit">edit</button>
-         </form>
+         </div>
       </div>
  
       <div>
          <span class ='name'>Password</span>
-         <form action="">
-          <input type="password" value="<%= locals.user.password %>" name="password">
+         <div class="input-container">
+          <input class="input" type="password" value="<%= locals.user.password %>" name="password">
           <button class="edit">change</button>
-      </form>
+         </div>
       </div>
     </div>
  
-    <button id="update">update</button>
-    <input type="text" id='update-link' name="id" value="/user/profile/update?id=<%= locals.user._id %>">
- </div> 
+    <button id="update" type="submit">update</button>
+    <!-- <input type="text" id='update-link' name="id" value="/user/profile/update?id=<%= locals.user._id %>"> -->
+   </form>
+<form action="/user/profile/pic_upload" id="upload-profile-pic" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar" />
+    <button type="submit"><i class="fa-solid fa-upload"></i></button>
+    <i class="fa-solid fa-xmark" id="close-popup"></i>
+</form>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/clg_info.js"></script>
+<script src="/js/fill_profile.js"></script>
 <script src="/js/profile.js"></script>
+
+<script src="/js/profile_pic_upload.js"></script>

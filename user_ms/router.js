@@ -21,4 +21,17 @@ router.get('/home',passport.checkAuthentication,(req,res,next) => {
 router.get('/profile',passport.checkAuthentication,controller.profile)
 router.post('/profile/update',passport.checkAuthentication,controller.updateProfile)
 
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './assets/uploads/user_profile')
+    },
+    filename: function (req, file, cb) {
+      cb(null, req.user.name)
+    }
+  })
+const upload = multer({ storage: storage })
+
+
+router.post('/profile/pic_upload',passport.checkAuthentication,upload.single('avatar'),controller.picUpload);
 module.exports = router;

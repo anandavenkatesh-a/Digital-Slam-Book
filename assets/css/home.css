@@ -22,7 +22,7 @@ h1 {
   background-color: #f1eff1;
 }
 
-#main-container #search-bar-container {
+#main-container #search #search-bar-container {
   height: fit-content;
   width: fit-content;
   border: 0px solid;
@@ -36,19 +36,32 @@ h1 {
   margin: 30px 0px 21px 0px;
 }
 
-#main-container #search-bar-container span {
+#main-container #search #search-bar-container #search-bar {
+  display: inline-block;
+  height: 36px;
+  width: 600px !important;
+  background-color: #f6f4f6;
+  font-size: larger;
+  border: 0px solid;
+}
+
+#main-container #search #search-bar-container span {
   display: inline-block;
   height: fit-content;
   width: fit-content;
 }
 
-#main-container #search-bar-container #search-bar {
-  display: inline-block;
-  height: 36px;
-  width: 600px;
-  background-color: #f6f4f6;
-  font-size: larger;
-  border: 0px solid;
+#main-container #search #search-bar-container select {
+  background-color: #f690dd;
+  color: white;
+  font-weight: 900;
+}
+
+#main-container #search #adv-search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #main-container #search-container-wrapper {
@@ -98,11 +111,11 @@ h1 {
   width: 60px;
   border: 0px solid;
   border-radius: 50%;
-  background-image: url("https://iconape.com/wp-content/files/im/10836/png/iconfinder_3_avatar_2754579.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   margin: 9px !important;
   display: inline-block;
+  background-repeat: no-repeat;
 }
 
 #main-container #search-container-wrapper #search-result-container .search-result > div .users-name {

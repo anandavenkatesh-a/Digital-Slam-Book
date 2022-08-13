@@ -48,8 +48,9 @@ module.exports.render_sign_up = (req,res) => {
 module.exports.create = async (req,res) => {
     console.log(req.body);
     try{
-         const user = await User.findOne({email:req.body.email}).exec();
-         if(user)
+         const user1 = await User.findOne({email:req.body.email}).exec();
+         const user2 = await User.findOne({name:req.body.name});
+         if(user1||user2)
          {
             return res.redirect('/user/sign-in');
          }
@@ -95,16 +96,17 @@ module.exports.updateProfile = async (req,res) => {
         console.log('after',user);
         await user.save();
     
-        return res.status(200).json({
-            message:'req succesful',
-            data:user
-        });
+        return res.redirect('back');
     } 
     catch(err)
     {
         console.log(err);
-        return res.status(500).json({
-            message:'internal server error'
-        });
+        return res.redirect('back');
     }
 };
+module.exports.picUpload = async (req,res) => {
+    const user = await User.findById(req.user._id);
+    user.avatar = '/uploads/user_profile/'+user.name;
+    await user.save();
+    return res.redirect('/user/profile');
+}; 

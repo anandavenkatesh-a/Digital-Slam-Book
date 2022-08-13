@@ -24,22 +24,6 @@ h1 {
   overflow-y: scroll;
 }
 
-#main-container #heading {
-  margin: 0;
-  font-size: 1rem;
-  height: fit-content;
-  width: fit-content;
-  padding-left: 21px;
-  padding-right: 21px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border: 0px solid;
-  border-radius: 0.5rem;
-  background-color: #fffeff;
-  margin: 21px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-
 #main-container #profile-pic-container {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   width: 360px;
@@ -70,7 +54,7 @@ h1 {
   left: 60px;
 }
 
-#main-container #profile-pic-container form {
+#main-container #profile-pic-container .input-container {
   height: 81%;
   display: flex;
   flex-direction: column;
@@ -78,7 +62,7 @@ h1 {
   align-items: center;
 }
 
-#main-container #profile-pic-container form input {
+#main-container #profile-pic-container .input-container input {
   background-color: transparent;
   border: none !important;
   font-size: 1rem;
@@ -113,13 +97,13 @@ h1 {
   color: #696868;
 }
 
-#main-container #other-details > div form {
+#main-container #other-details > div .input-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#main-container #other-details > div form input {
+#main-container #other-details > div .input-container input {
   background-color: transparent;
   border: none !important;
   font-size: 1rem;
@@ -142,4 +126,42 @@ h1 {
   border: 0px solid;
   padding: 3px;
   border-radius: 0.3rem;
+}
+
+#upload-profile-pic {
+  height: 150px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  background-color: #fac0ff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 0px solid;
+  border-radius: 1rem;
+}
+
+#upload-profile-pic #close-popup {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  color: grey;
+}
+
+#upload-profile-pic #close-popup:hover {
+  color: red !important;
+}
+
+#upload-profile-pic button {
+  background-color: transparent !important;
+  border: none;
+}
+
+#upload-profile-pic button i {
+  font-size: 3rem;
+}
+
+#upload-profile-pic button i:hover {
+  color: grey;
 }
